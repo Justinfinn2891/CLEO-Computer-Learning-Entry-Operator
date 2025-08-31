@@ -9,10 +9,16 @@ int main(){
     srand(time(0));
     int y = 0;
     for(int i = 0; i < 9999; i++){
-        file << ((rand() % 830) + 100);
+        if(y >= 360){
+            y = 0;
+        }
+        file << y << ',';
+        file << ((rand() % 500) + 100);
         file << ',';
+        y++;
     }
-    file << ((rand() % 830) + 100) << ",";
+    file << y << ',';
+    file << ((rand() % 830) + 100) << " ";
 
     file.close();
     return 0;

@@ -2,6 +2,7 @@
 #include <fstream>
 #include <vector>
 #include <string>
+#include <cmath>
 #include "raylib.h"
 
 struct Robot{
@@ -16,9 +17,9 @@ struct Robot{
 //Simple file reader for csv, may need modifcation based on new files
 void OpenFile(std::vector<int>& data);
 
-void CreateTextrue(std::vector<int> data, RenderTexture2D lidarTexture);
+void CreateTextrue(std::vector<int> data, RenderTexture2D lidarTexture, Robot robot);
 
-void CreateGrid(int x,int y);
+void CreateGrid(int x,int y,Robot robot);
 
 void TestKey(Robot& robot, bool& flipped);
 
@@ -43,7 +44,7 @@ int main(){
     SetTargetFPS(60);
 
     RenderTexture2D lidarTexture = LoadRenderTexture(screenWidth,screenHeight);
-    CreateTextrue(data,lidarTexture);
+    CreateTextrue(data, lidarTexture, robot);
 
     //primary loop this is where the drawing happens
     while(!WindowShouldClose()){
@@ -52,7 +53,7 @@ int main(){
             ClearBackground(BLACK);
             DrawFPS(10,10);
 
-            CreateGrid(screenWidth,screenHeight);
+            CreateGrid(screenWidth,screenHeight, robot);
 
             DrawRectangle(robot.x-10,robot.y-20,robot.w,robot.h,PURPLE);
 
@@ -108,15 +109,15 @@ void OpenFile(std::vector<int>& data){
 }
 
 
-void CreateTextrue(std::vector<int> data, RenderTexture2D lidarTexture){
+void CreateTextrue(std::vector<int> data, RenderTexture2D lidarTexture, Robot robot){
     BeginTextureMode(lidarTexture);
     for(int i = 0; i <= data.size()-1; i += 2){
-        DrawCircle(data[i],data[i+1],4,WHITE);
+        DrawCircle((robot.x + (data[i+1] * cos(data[i]))),(robot.y + (data[i+1] * sin(data[i]))),4,WHITE);
     }
     EndTextureMode();
 }
 
-void CreateGrid(int x,int y){
+void CreateGrid(int x,int y,Robot robot){
     /*
     //vertical lines
     for(int i = 100; i < x; i += 100){
@@ -130,7 +131,7 @@ void CreateGrid(int x,int y){
         */
 
     for(int i = 100; i < x; i += 100){
-        DrawCircleLines(x/2,y/2,i,LIGHTGRAY);
+        DrawCircleLines(robot.x,robot.y,i,LIGHTGRAY);
     }
 
 }
