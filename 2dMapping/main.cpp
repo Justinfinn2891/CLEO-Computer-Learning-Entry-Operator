@@ -3,16 +3,17 @@
 #include <vector>
 #include <string>
 #include <cmath>
+#include <random>
 #include "raylib.h"
+
+
 
 struct Robot{
     int x, y, w = 20, h = 40;
 };
 
 
-//Simple funciton that takes the data from the csv and creates circles at x,y coords
-//Will need to be modified to be centered around robot and draw based on distance
-//void DrawPoints(std::vector<int> data);
+
 
 //Simple file reader for csv, may need modifcation based on new files
 void OpenFile(std::vector<int>& data);
@@ -23,6 +24,8 @@ void CreateGrid(int x,int y,Robot robot);
 
 void TestKey(Robot& robot, bool& flipped);
 
+void DrawPoints(Robot robot,std::vector<int> data);
+
 
 int main(){
 
@@ -32,11 +35,9 @@ int main(){
     int test = 0;
     std::vector<int> data;
     bool flipped = false;
+    srand(time(0));
 
     struct Robot robot = {screenWidth/2,screenHeight/2};
-
-
-
 
     OpenFile(data);
 
@@ -50,8 +51,11 @@ int main(){
     while(!WindowShouldClose()){
         BeginDrawing();
 
+
             ClearBackground(BLACK);
             DrawFPS(10,10);
+
+
 
             CreateGrid(screenWidth,screenHeight, robot);
 
@@ -60,11 +64,10 @@ int main(){
             TestKey(robot,flipped);
 
 
-            
-        
-
-            //DrawPoints(data);
+    
             DrawTextureRec(lidarTexture.texture,(Rectangle){0,0,(float)screenWidth, -(float)screenHeight},(Vector2){0,0},WHITE);
+
+
         EndDrawing();
     }
 
@@ -74,20 +77,10 @@ int main(){
 }
 
 
-/*
-void DrawPoints(std::vector<int> data){
-    for(int i = 0; i <= data.size(); i += 2){
-        DrawCircle(data[i],data[i+1],4,WHITE);
-    }
-}
-*/
 
 void OpenFile(std::vector<int>& data){
     std::string line;
     int location , i = 0;
-
-
-
 
     std::ifstream file;
     file.open("tests/Random_coordinates.csv");
@@ -118,18 +111,6 @@ void CreateTextrue(std::vector<int> data, RenderTexture2D lidarTexture, Robot ro
 }
 
 void CreateGrid(int x,int y,Robot robot){
-    /*
-    //vertical lines
-    for(int i = 100; i < x; i += 100){
-        DrawLine(i,0,i,y,WHITE);
-    }
-
-    //horizontal lines
-    for(int i = 100; i < x; i += 100){
-        DrawLine(0,i,x,i,WHITE);
-    }
-        */
-
     for(int i = 100; i < x; i += 100){
         DrawCircleLines(robot.x,robot.y,i,LIGHTGRAY);
     }
@@ -176,3 +157,5 @@ void TestKey(Robot& robot, bool &flipped){
         }
     }
 }
+
+
