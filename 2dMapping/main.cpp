@@ -2,25 +2,29 @@
 #include <fstream>
 #include <vector>
 #include <string>
+#include <cmath>
+#include <random>
 #include "raylib.h"
+
+
 
 struct Robot{
     int x, y, w = 20, h = 40;
 };
 
 
-//Simple funciton that takes the data from the csv and creates circles at x,y coords
-//Will need to be modified to be centered around robot and draw based on distance
-//void DrawPoints(std::vector<int> data);
+
 
 //Simple file reader for csv, may need modifcation based on new files
 void OpenFile(std::vector<int>& data);
 
-void CreateTextrue(std::vector<int> data, RenderTexture2D lidarTexture);
+void CreateTextrue(std::vector<int> data, RenderTexture2D lidarTexture, Robot robot);
 
-void CreateGrid(int x,int y);
+void CreateGrid(int x,int y,Robot robot);
 
 void TestKey(Robot& robot, bool& flipped);
+
+void DrawPoints(Robot robot,std::vector<int> data);
 
 
 int main(){
@@ -31,11 +35,9 @@ int main(){
     int test = 0;
     std::vector<int> data;
     bool flipped = false;
+    srand(time(0));
 
     struct Robot robot = {screenWidth/2,screenHeight/2};
-
-
-
 
     OpenFile(data);
 
@@ -43,27 +45,29 @@ int main(){
     SetTargetFPS(60);
 
     RenderTexture2D lidarTexture = LoadRenderTexture(screenWidth,screenHeight);
-    CreateTextrue(data,lidarTexture);
+    CreateTextrue(data, lidarTexture, robot);
 
     //primary loop this is where the drawing happens
     while(!WindowShouldClose()){
         BeginDrawing();
 
+
             ClearBackground(BLACK);
             DrawFPS(10,10);
 
-            CreateGrid(screenWidth,screenHeight);
+
+
+            CreateGrid(screenWidth,screenHeight, robot);
 
             DrawRectangle(robot.x-10,robot.y-20,robot.w,robot.h,PURPLE);
 
             TestKey(robot,flipped);
 
 
-            
-        
-
-            //DrawPoints(data);
+    
             DrawTextureRec(lidarTexture.texture,(Rectangle){0,0,(float)screenWidth, -(float)screenHeight},(Vector2){0,0},WHITE);
+
+
         EndDrawing();
     }
 
@@ -73,20 +77,10 @@ int main(){
 }
 
 
-/*
-void DrawPoints(std::vector<int> data){
-    for(int i = 0; i <= data.size(); i += 2){
-        DrawCircle(data[i],data[i+1],4,WHITE);
-    }
-}
-*/
 
 void OpenFile(std::vector<int>& data){
     std::string line;
     int location , i = 0;
-
-
-
 
     std::ifstream file;
     file.open("tests/Random_coordinates.csv");
@@ -108,29 +102,17 @@ void OpenFile(std::vector<int>& data){
 }
 
 
-void CreateTextrue(std::vector<int> data, RenderTexture2D lidarTexture){
+void CreateTextrue(std::vector<int> data, RenderTexture2D lidarTexture, Robot robot){
     BeginTextureMode(lidarTexture);
     for(int i = 0; i <= data.size()-1; i += 2){
-        DrawCircle(data[i],data[i+1],4,WHITE);
+        DrawCircle((robot.x + (data[i+1] * cos(data[i]))),(robot.y + (data[i+1] * sin(data[i]))),4,WHITE);
     }
     EndTextureMode();
 }
 
-void CreateGrid(int x,int y){
-    /*
-    //vertical lines
+void CreateGrid(int x,int y,Robot robot){
     for(int i = 100; i < x; i += 100){
-        DrawLine(i,0,i,y,WHITE);
-    }
-
-    //horizontal lines
-    for(int i = 100; i < x; i += 100){
-        DrawLine(0,i,x,i,WHITE);
-    }
-        */
-
-    for(int i = 100; i < x; i += 100){
-        DrawCircleLines(x/2,y/2,i,LIGHTGRAY);
+        DrawCircleLines(robot.x,robot.y,i,LIGHTGRAY);
     }
 
 }
@@ -175,3 +157,5 @@ void TestKey(Robot& robot, bool &flipped){
         }
     }
 }
+
+
