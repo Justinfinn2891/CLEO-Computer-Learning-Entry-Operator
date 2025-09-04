@@ -4,3 +4,5 @@ Project Tracker -> https://docs.google.com/spreadsheets/d/12y3wJU4cHn6q5bq1VsLET
 
 
 Guys we need to a git ignore file 
+
+its now leo :( lidar entry operator
