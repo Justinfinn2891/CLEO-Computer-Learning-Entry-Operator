@@ -5,6 +5,29 @@
 /* For the objects we are going to make*/
 using namespace rp::standalone::rplidar;
 
+
+/*
+FOR THE LIBRARY LATER: 
+
+1.) sudo apt update 
+sudo apt install build-essentials (kimble)
+
+g++ mylidar.cpp -o mylidar -I./sdk/include -L./sdk/lib -lrplidar_sdk -lpthread
+
+
+TO DO: 
+
+- Make sure this works
+- Break up this into separate functions, maybe a lidar class
+- we need a method for filtering out
+- need to complete the findx,y,z functions to get the coordinates, we then need to store them in a .csv or some kind of file 
+
+*/
+
+int findX(const float &angle, const float &distance);
+int findY(const float &angle, const float &distance);
+int findZ(const float &angle, const float &distance);
+
 int main(int argc, const char *argv[]){
   
     ofstream file; 
@@ -16,7 +39,7 @@ int main(int argc, const char *argv[]){
 
     if(!driver){
         std::cerr << "Creating the driver has failed!" << std::endl; 
-        isFailed = true
+        isFailed = true;
         return -1;
     }
 
@@ -31,7 +54,7 @@ int main(int argc, const char *argv[]){
     
     if(IS_FAIL(driver->startScan(0,1))){ // Start normal scan
         std::cerr << "Error to start the scan" << std::endl;
-        return -1
+        return -1;
     }
 
     // This array will hold all the scan measurements that we get 
@@ -40,23 +63,23 @@ int main(int argc, const char *argv[]){
 
     while(true){
         count = sizeof(nodes) / sizeof(nodes[0]); // Maximum number of nodes that it can carry
-        u_result result = driver->grabScanDataHq(nodes, count) // Asking the lidar for the scan
+        u_result result = driver->grabScanDataHq(nodes, count); // Asking the lidar for the scan
         std::string userInput; 
         if(IS_OK(result)){
             driver->ascendScanData(nodes, count); // puts the nodes in an ascending order based off angle            
             std::cout << "Are you ready for the data?: " << endl;
             std::cin >> userInput; 
             file.open("data.txt");
-            if(userInput.upper() == "YES"){
+            if(userInput == "YES"){
                 for(size_t pos = 0; pos < count; pos++){
                     float angle = nodes[pos].angle_z_q14 * 90.f / (1 << 14); // takes the raw data and coverts it into degrees
                     float distance = nodes[pos].dist_mm_q2 / 4.0f; // raw distance / 4 to get millimeters
                     std::cout << "Angle: " << angle << "distance: " << distance << std::endl; 
-                    file << angle << distance; 
+                    file << angle << "," << distance << std::endl; 
                 }
             }
             else{
-                return -1;
+                break;
             }
         }
     }
@@ -64,8 +87,23 @@ int main(int argc, const char *argv[]){
     file.close();
     driver->stop();
     driver->stopMotor();
-    RPlidarDriver::DisposeDriver(drv);
+    RPlidarDriver::DisposeDriver(driver);
 
     return 0; 
 
+}
+
+int findX(const float &angle, const float &distance){
+    int x;
+    retun x; 
+}
+
+int findY(const float &angle, const float &distance){
+    int x;
+    retun x; 
+}
+
+int findZ(const float &angle, const float &distance){
+    int x;
+    retun x; 
 }
