@@ -11,6 +11,8 @@ its now leo :( lidar entry operator
 g++ lidar.cpp -o mylidar -I./rplidar_sdk-master/sdk/include -I./rplidar_sdk-master/sdk/src ~/rplidar_sdk-maste
 r/output/Linux/Release/libsl_lidar_sdk.a
 
+g++ lidar.cpp -o lidar     -I./rplidar_sdk-master/sdk/include     -I./rplidar_sdk-master/sdk/src     -L./rplidar_sdk-master/output/Linux/Release     -lsl_lidar_sdk -lpthread -std=c++14
+
 
 #include <iostream>
 #include <string>
