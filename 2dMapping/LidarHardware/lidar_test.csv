@@ -1,1127 +1,1132 @@
 Starting LIDAR test...
 Using port: /dev/ttyUSB0 at baud 115200
 LIDAR connected. Firmware: 1.29  Hardware: 7
-Angle: 0.0823975  Dist: 0 mm
-Angle: 0.401001  Dist: 0 mm
-Angle: 0.725098  Dist: 0 mm
-Angle: 1.0437  Dist: 0 mm
-Angle: 1.10413  Dist: 458 mm
-Angle: 1.3623  Dist: 0 mm
-Angle: 1.43372  Dist: 457 mm
-Angle: 1.74683  Dist: 456 mm
-Angle: 2.12036  Dist: 455 mm
-Angle: 2.44995  Dist: 454 mm
-Angle: 2.76306  Dist: 454 mm
-Angle: 3.09265  Dist: 453 mm
-Angle: 3.40576  Dist: 452 mm
-Angle: 3.72986  Dist: 452 mm
-Angle: 4.04297  Dist: 452 mm
-Angle: 4.37256  Dist: 453 mm
-Angle: 4.68567  Dist: 454 mm
-Angle: 5.01526  Dist: 454 mm
-Angle: 5.85022  Dist: 0 mm
-Angle: 6.16882  Dist: 0 mm
-Angle: 6.48743  Dist: 0 mm
-Angle: 6.81152  Dist: 0 mm
-Angle: 7.13013  Dist: 0 mm
-Angle: 7.44873  Dist: 0 mm
-Angle: 7.76733  Dist: 0 mm
-Angle: 8.09143  Dist: 0 mm
-Angle: 8.41003  Dist: 0 mm
-Angle: 8.72864  Dist: 0 mm
-Angle: 9.05273  Dist: 0 mm
-Angle: 9.37134  Dist: 0 mm
-Angle: 9.68994  Dist: 0 mm
-Angle: 10.014  Dist: 0 mm
-Angle: 10.3326  Dist: 0 mm
-Angle: 10.6512  Dist: 0 mm
-Angle: 10.9698  Dist: 0 mm
-Angle: 11.2939  Dist: 0 mm
-Angle: 11.6125  Dist: 0 mm
-Angle: 11.9312  Dist: 0 mm
-Angle: 12.2552  Dist: 0 mm
-Angle: 12.5739  Dist: 0 mm
-Angle: 12.8925  Dist: 0 mm
-Angle: 13.2166  Dist: 0 mm
-Angle: 13.5352  Dist: 0 mm
-Angle: 13.8538  Dist: 0 mm
-Angle: 14.1779  Dist: 0 mm
-Angle: 14.4965  Dist: 0 mm
-Angle: 14.8151  Dist: 0 mm
-Angle: 15.1337  Dist: 0 mm
-Angle: 15.4578  Dist: 0 mm
-Angle: 15.7764  Dist: 0 mm
-Angle: 16.095  Dist: 0 mm
-Angle: 16.4191  Dist: 0 mm
-Angle: 16.7377  Dist: 0 mm
-Angle: 17.0563  Dist: 0 mm
-Angle: 17.3804  Dist: 0 mm
-Angle: 17.699  Dist: 0 mm
-Angle: 18.0176  Dist: 0 mm
-Angle: 18.3417  Dist: 0 mm
-Angle: 18.6603  Dist: 0 mm
-Angle: 18.9789  Dist: 0 mm
-Angle: 19.2975  Dist: 0 mm
-Angle: 19.6216  Dist: 0 mm
-Angle: 19.9402  Dist: 0 mm
-Angle: 20.2588  Dist: 0 mm
-Angle: 20.5829  Dist: 0 mm
-Angle: 20.9015  Dist: 0 mm
-Angle: 21.2201  Dist: 0 mm
-Angle: 21.5442  Dist: 0 mm
-Angle: 21.8628  Dist: 0 mm
-Angle: 22.1814  Dist: 0 mm
-Angle: 22.5055  Dist: 0 mm
-Angle: 22.8241  Dist: 0 mm
-Angle: 23.1427  Dist: 0 mm
-Angle: 23.4613  Dist: 0 mm
-Angle: 23.7854  Dist: 0 mm
-Angle: 24.104  Dist: 0 mm
-Angle: 24.4226  Dist: 0 mm
-Angle: 24.7467  Dist: 0 mm
-Angle: 25.0653  Dist: 0 mm
-Angle: 25.3839  Dist: 0 mm
-Angle: 25.708  Dist: 0 mm
-Angle: 26.0266  Dist: 0 mm
-Angle: 26.3452  Dist: 0 mm
-Angle: 26.6638  Dist: 0 mm
-Angle: 26.9879  Dist: 0 mm
-Angle: 27.3065  Dist: 0 mm
-Angle: 27.6251  Dist: 0 mm
-Angle: 27.9492  Dist: 0 mm
-Angle: 28.2678  Dist: 0 mm
-Angle: 28.5864  Dist: 0 mm
-Angle: 28.9105  Dist: 0 mm
-Angle: 29.2291  Dist: 0 mm
-Angle: 29.5477  Dist: 0 mm
-Angle: 29.8718  Dist: 0 mm
-Angle: 30.1904  Dist: 0 mm
-Angle: 30.509  Dist: 0 mm
-Angle: 30.8276  Dist: 0 mm
-Angle: 31.1517  Dist: 0 mm
-Angle: 41.402  Dist: 103 mm
-Angle: 41.7316  Dist: 103 mm
-Angle: 41.9348  Dist: 104 mm
-Angle: 42.2644  Dist: 104 mm
-Angle: 42.4677  Dist: 105 mm
-Angle: 42.7917  Dist: 105 mm
-Angle: 42.9346  Dist: 106 mm
-Angle: 43.2642  Dist: 106 mm
-Angle: 43.4674  Dist: 107 mm
-Angle: 43.7915  Dist: 107 mm
-Angle: 43.9948  Dist: 108 mm
-Angle: 44.3243  Dist: 108 mm
-Angle: 44.5276  Dist: 109 mm
-Angle: 44.8407  Dist: 109 mm
-Angle: 45.1703  Dist: 109 mm
-Angle: 45.3735  Dist: 110 mm
-Angle: 45.5933  Dist: 111 mm
-Angle: 45.9009  Dist: 111 mm
-Angle: 46.1041  Dist: 112 mm
-Angle: 46.4337  Dist: 112 mm
-Angle: 46.637  Dist: 113 mm
-Angle: 46.9666  Dist: 113 mm
-Angle: 47.1698  Dist: 114 mm
-Angle: 47.4994  Dist: 114 mm
-Angle: 47.7026  Dist: 115 mm
-Angle: 48.0267  Dist: 115 mm
-Angle: 48.23  Dist: 116 mm
-Angle: 48.4991  Dist: 117 mm
-Angle: 48.8232  Dist: 117 mm
-Angle: 49.0265  Dist: 118 mm
-Angle: 49.3396  Dist: 118 mm
-Angle: 49.5593  Dist: 119 mm
-Angle: 49.8724  Dist: 119 mm
-Angle: 50.0482  Dist: 0 mm
-Angle: 50.0922  Dist: 120 mm
-Angle: 50.3558  Dist: 121 mm
-Angle: 50.3668  Dist: 0 mm
-Angle: 50.6689  Dist: 121 mm
-Angle: 50.8722  Dist: 122 mm
-Angle: 51.0095  Dist: 0 mm
-Angle: 51.2018  Dist: 122 mm
-Angle: 51.3281  Dist: 0 mm
-Angle: 51.405  Dist: 123 mm
-Angle: 51.6467  Dist: 0 mm
-Angle: 51.7291  Dist: 123 mm
-Angle: 51.9708  Dist: 0 mm
-Angle: 51.9983  Dist: 124 mm
-Angle: 52.2015  Dist: 125 mm
-Angle: 52.2894  Dist: 0 mm
-Angle: 52.5311  Dist: 125 mm
-Angle: 52.608  Dist: 0 mm
-Angle: 52.7948  Dist: 126 mm
-Angle: 52.9321  Dist: 0 mm
-Angle: 53.1079  Dist: 126 mm
-Angle: 53.2507  Dist: 0 mm
-Angle: 53.3276  Dist: 127 mm
-Angle: 53.5693  Dist: 0 mm
-Angle: 53.5913  Dist: 128 mm
-Angle: 53.8934  Dist: 0 mm
-Angle: 53.9044  Dist: 128 mm
-Angle: 54.1241  Dist: 129 mm
-Angle: 54.212  Dist: 0 mm
-Angle: 54.3878  Dist: 130 mm
-Angle: 54.5306  Dist: 0 mm
-Angle: 54.7009  Dist: 130 mm
-Angle: 54.8492  Dist: 0 mm
-Angle: 54.9207  Dist: 131 mm
-Angle: 55.1678  Dist: 132 mm
-Angle: 55.1733  Dist: 0 mm
-Angle: 55.4919  Dist: 0 mm
-Angle: 55.4974  Dist: 132 mm
-Angle: 55.7007  Dist: 133 mm
-Angle: 55.8105  Dist: 0 mm
-Angle: 56.0303  Dist: 133 mm
-Angle: 56.1346  Dist: 0 mm
-Angle: 56.2939  Dist: 134 mm
-Angle: 56.4532  Dist: 0 mm
-Angle: 56.5576  Dist: 135 mm
-Angle: 56.7719  Dist: 0 mm
-Angle: 57.0959  Dist: 0 mm
-Angle: 57.4036  Dist: 136 mm
-Angle: 57.4146  Dist: 0 mm
-Angle: 57.7332  Dist: 0 mm
-Angle: 58.0518  Dist: 0 mm
-Angle: 58.3759  Dist: 0 mm
-Angle: 58.6945  Dist: 0 mm
-Angle: 59.0131  Dist: 0 mm
-Angle: 59.3372  Dist: 0 mm
-Angle: 59.6558  Dist: 0 mm
-Angle: 59.9744  Dist: 0 mm
-Angle: 60.2985  Dist: 0 mm
-Angle: 60.6171  Dist: 0 mm
-Angle: 60.9357  Dist: 0 mm
-Angle: 61.2598  Dist: 0 mm
-Angle: 61.5784  Dist: 0 mm
-Angle: 61.897  Dist: 0 mm
-Angle: 62.2156  Dist: 0 mm
-Angle: 62.5397  Dist: 0 mm
-Angle: 62.8583  Dist: 0 mm
-Angle: 63.1714  Dist: 564 mm
-Angle: 63.1769  Dist: 0 mm
-Angle: 63.479  Dist: 566 mm
-Angle: 63.501  Dist: 0 mm
-Angle: 63.8086  Dist: 568 mm
-Angle: 63.8196  Dist: 0 mm
-Angle: 64.0778  Dist: 572 mm
-Angle: 64.3854  Dist: 574 mm
-Angle: 64.715  Dist: 576 mm
-Angle: 65.0281  Dist: 578 mm
-Angle: 65.3577  Dist: 582 mm
-Angle: 65.6708  Dist: 584 mm
-Angle: 65.9344  Dist: 588 mm
-Angle: 67.3407  Dist: 0 mm
-Angle: 67.6648  Dist: 0 mm
-Angle: 72.5153  Dist: 174 mm
-Angle: 72.8394  Dist: 174 mm
-Angle: 73.1525  Dist: 174 mm
-Angle: 73.4821  Dist: 174 mm
-Angle: 73.7457  Dist: 175 mm
-Angle: 74.0588  Dist: 175 mm
-Angle: 74.3719  Dist: 175 mm
-Angle: 74.7015  Dist: 175 mm
-Angle: 75.0146  Dist: 175 mm
-Angle: 75.2783  Dist: 176 mm
-Angle: 75.6079  Dist: 176 mm
-Angle: 75.921  Dist: 176 mm
-Angle: 76.2451  Dist: 176 mm
-Angle: 76.5582  Dist: 176 mm
-Angle: 76.8274  Dist: 177 mm
-Angle: 77.1515  Dist: 177 mm
-Angle: 77.4646  Dist: 177 mm
-Angle: 77.7942  Dist: 177 mm
-Angle: 78.1073  Dist: 178 mm
-Angle: 78.4204  Dist: 178 mm
-Angle: 78.75  Dist: 178 mm
-Angle: 79.0137  Dist: 179 mm
-Angle: 79.3268  Dist: 179 mm
-Angle: 79.6509  Dist: 179 mm
-Angle: 79.964  Dist: 179 mm
-Angle: 80.2332  Dist: 180 mm
-Angle: 80.5573  Dist: 180 mm
-Angle: 80.8704  Dist: 180 mm
-Angle: 81.1395  Dist: 181 mm
-Angle: 81.4526  Dist: 181 mm
-Angle: 81.7767  Dist: 182 mm
-Angle: 82.0898  Dist: 182 mm
-Angle: 82.4194  Dist: 182 mm
-Angle: 82.7325  Dist: 182 mm
-Angle: 82.9962  Dist: 183 mm
-Angle: 83.3258  Dist: 183 mm
-Angle: 83.5895  Dist: 184 mm
-Angle: 83.9026  Dist: 184 mm
-Angle: 84.2322  Dist: 184 mm
-Angle: 84.4794  Dist: 185 mm
-Angle: 84.809  Dist: 185 mm
-Angle: 85.1221  Dist: 186 mm
-Angle: 85.4517  Dist: 186 mm
-Angle: 85.7648  Dist: 186 mm
-Angle: 86.0284  Dist: 187 mm
-Angle: 86.2921  Dist: 188 mm
-Angle: 86.6217  Dist: 188 mm
-Angle: 86.9348  Dist: 188 mm
-Angle: 87.2479  Dist: 189 mm
-Angle: 87.5775  Dist: 189 mm
-Angle: 87.8906  Dist: 189 mm
-Angle: 88.1543  Dist: 190 mm
-Angle: 88.418  Dist: 191 mm
-Angle: 88.7476  Dist: 191 mm
-Angle: 89.0607  Dist: 192 mm
-Angle: 89.3903  Dist: 192 mm
-Angle: 89.6375  Dist: 193 mm
-Angle: 89.967  Dist: 193 mm
-Angle: 90.2307  Dist: 194 mm
-Angle: 90.5438  Dist: 194 mm
-Angle: 90.8734  Dist: 195 mm
-Angle: 91.1371  Dist: 196 mm
-Angle: 91.4502  Dist: 196 mm
-Angle: 91.7139  Dist: 197 mm
-Angle: 92.0435  Dist: 197 mm
-Angle: 92.3566  Dist: 198 mm
-Angle: 92.6862  Dist: 198 mm
-Angle: 92.9498  Dist: 199 mm
-Angle: 93.2025  Dist: 200 mm
-Angle: 93.5266  Dist: 201 mm
-Angle: 93.7958  Dist: 202 mm
-Angle: 94.1089  Dist: 202 mm
-Angle: 94.433  Dist: 203 mm
-Angle: 94.5648  Dist: 0 mm
-Angle: 94.7021  Dist: 204 mm
-Angle: 94.9658  Dist: 205 mm
-Angle: 95.2075  Dist: 0 mm
-Angle: 95.2789  Dist: 205 mm
-Angle: 95.5261  Dist: 0 mm
-Angle: 95.6085  Dist: 206 mm
-Angle: 95.8502  Dist: 0 mm
-Angle: 95.8557  Dist: 207 mm
-Angle: 96.1688  Dist: 0 mm
-Angle: 96.1853  Dist: 208 mm
-Angle: 96.449  Dist: 209 mm
-Angle: 96.4874  Dist: 0 mm
-Angle: 96.7621  Dist: 209 mm
-Angle: 96.8115  Dist: 0 mm
-Angle: 97.0917  Dist: 210 mm
-Angle: 97.1301  Dist: 0 mm
-Angle: 97.3553  Dist: 211 mm
-Angle: 97.4487  Dist: 0 mm
-Angle: 97.7673  Dist: 0 mm
-Angle: 97.8882  Dist: 214 mm
-Angle: 98.0914  Dist: 0 mm
-Angle: 98.41  Dist: 0 mm
-Angle: 98.7286  Dist: 0 mm
-Angle: 99.0527  Dist: 0 mm
-Angle: 99.3713  Dist: 0 mm
-Angle: 99.6899  Dist: 0 mm
-Angle: 100.091  Dist: 391 mm
-Angle: 100.404  Dist: 392 mm
-Angle: 100.734  Dist: 392 mm
-Angle: 101.047  Dist: 391 mm
-Angle: 101.371  Dist: 391 mm
-Angle: 101.684  Dist: 391 mm
-Angle: 102.057  Dist: 389 mm
-Angle: 102.387  Dist: 387 mm
-Angle: 102.7  Dist: 385 mm
-Angle: 103.03  Dist: 385 mm
-Angle: 103.403  Dist: 384 mm
-Angle: 103.716  Dist: 383 mm
-Angle: 104.046  Dist: 383 mm
-Angle: 104.359  Dist: 383 mm
-Angle: 104.683  Dist: 382 mm
-Angle: 104.996  Dist: 382 mm
-Angle: 105.134  Dist: 0 mm
-Angle: 105.639  Dist: 383 mm
-Angle: 105.776  Dist: 0 mm
-Angle: 108.029  Dist: 258 mm
-Angle: 108.402  Dist: 255 mm
-Angle: 108.781  Dist: 253 mm
-Angle: 109.089  Dist: 252 mm
-Angle: 109.528  Dist: 247 mm
-Angle: 110.012  Dist: 241 mm
-Angle: 110.451  Dist: 236 mm
-Angle: 110.934  Dist: 229 mm
-Angle: 111.374  Dist: 225 mm
-Angle: 111.808  Dist: 221 mm
-Angle: 112.231  Dist: 217 mm
-Angle: 112.67  Dist: 213 mm
-Angle: 113.104  Dist: 210 mm
-Angle: 113.483  Dist: 207 mm
-Angle: 113.857  Dist: 205 mm
-Angle: 114.296  Dist: 203 mm
-Angle: 114.67  Dist: 201 mm
-Angle: 115.109  Dist: 198 mm
-Angle: 115.384  Dist: 0 mm
-Angle: 115.527  Dist: 194 mm
-Angle: 115.708  Dist: 0 mm
-Angle: 116.027  Dist: 190 mm
-Angle: 116.345  Dist: 0 mm
-Angle: 116.45  Dist: 187 mm
-Angle: 116.664  Dist: 0 mm
-Angle: 116.84  Dist: 185 mm
-Angle: 116.988  Dist: 0 mm
-Angle: 117.153  Dist: 186 mm
-Angle: 117.307  Dist: 0 mm
-Angle: 117.356  Dist: 188 mm
-Angle: 117.62  Dist: 190 mm
-Angle: 117.625  Dist: 0 mm
-Angle: 117.889  Dist: 192 mm
-Angle: 118.092  Dist: 194 mm
-Angle: 118.268  Dist: 0 mm
-Angle: 118.312  Dist: 197 mm
-Angle: 118.575  Dist: 199 mm
-Angle: 118.586  Dist: 0 mm
-Angle: 118.911  Dist: 0 mm
-Angle: 119.229  Dist: 0 mm
-Angle: 119.465  Dist: 200 mm
-Angle: 119.548  Dist: 0 mm
-Angle: 120.19  Dist: 0 mm
-Angle: 120.778  Dist: 220 mm
-Angle: 121.904  Dist: 252 mm
-Angle: 122.607  Dist: 250 mm
-Angle: 122.921  Dist: 250 mm
-Angle: 123.184  Dist: 251 mm
-Angle: 123.497  Dist: 251 mm
-Angle: 123.827  Dist: 252 mm
-Angle: 124.14  Dist: 252 mm
-Angle: 124.354  Dist: 0 mm
-Angle: 124.464  Dist: 253 mm
-Angle: 124.777  Dist: 253 mm
-Angle: 125.107  Dist: 253 mm
-Angle: 125.42  Dist: 253 mm
-Angle: 125.684  Dist: 255 mm
-Angle: 125.997  Dist: 256 mm
-Angle: 126.639  Dist: 254 mm
-Angle: 127.073  Dist: 250 mm
-Angle: 127.452  Dist: 246 mm
-Angle: 127.826  Dist: 244 mm
-Angle: 128.199  Dist: 243 mm
-Angle: 128.513  Dist: 243 mm
-Angle: 128.837  Dist: 0 mm
-Angle: 128.842  Dist: 242 mm
-Angle: 129.155  Dist: 0 mm
-Angle: 129.216  Dist: 241 mm
-Angle: 129.529  Dist: 240 mm
-Angle: 129.798  Dist: 0 mm
-Angle: 129.858  Dist: 239 mm
-Angle: 130.172  Dist: 239 mm
-Angle: 130.496  Dist: 239 mm
-Angle: 130.809  Dist: 239 mm
-Angle: 131.765  Dist: 240 mm
-Angle: 132.188  Dist: 249 mm
-Angle: 132.561  Dist: 248 mm
-Angle: 132.874  Dist: 248 mm
-Angle: 133.198  Dist: 246 mm
-Angle: 133.577  Dist: 245 mm
-Angle: 133.643  Dist: 0 mm
-Angle: 133.89  Dist: 244 mm
-Angle: 133.962  Dist: 0 mm
-Angle: 134.264  Dist: 243 mm
-Angle: 134.594  Dist: 243 mm
-Angle: 134.604  Dist: 0 mm
-Angle: 134.901  Dist: 242 mm
-Angle: 134.923  Dist: 0 mm
-Angle: 135.231  Dist: 242 mm
-Angle: 135.242  Dist: 0 mm
-Angle: 135.544  Dist: 243 mm
-Angle: 135.566  Dist: 0 mm
-Angle: 135.884  Dist: 0 mm
-Angle: 136.203  Dist: 0 mm
-Angle: 136.45  Dist: 244 mm
-Angle: 136.522  Dist: 0 mm
-Angle: 136.846  Dist: 0 mm
-Angle: 137.164  Dist: 0 mm
-Angle: 137.483  Dist: 0 mm
-Angle: 137.807  Dist: 0 mm
-Angle: 138.126  Dist: 0 mm
-Angle: 138.444  Dist: 0 mm
-Angle: 138.768  Dist: 0 mm
-Angle: 139.087  Dist: 0 mm
-Angle: 139.406  Dist: 0 mm
-Angle: 139.73  Dist: 0 mm
-Angle: 139.922  Dist: 2748 mm
-Angle: 140.048  Dist: 0 mm
-Angle: 140.295  Dist: 2716 mm
-Angle: 140.367  Dist: 0 mm
-Angle: 140.625  Dist: 2720 mm
-Angle: 140.685  Dist: 0 mm
-Angle: 140.933  Dist: 2720 mm
-Angle: 141.01  Dist: 0 mm
-Angle: 141.246  Dist: 2716 mm
-Angle: 141.328  Dist: 0 mm
-Angle: 141.575  Dist: 2728 mm
-Angle: 141.647  Dist: 0 mm
-Angle: 141.888  Dist: 2732 mm
-Angle: 141.971  Dist: 0 mm
-Angle: 142.218  Dist: 2732 mm
-Angle: 142.289  Dist: 0 mm
-Angle: 142.482  Dist: 2740 mm
-Angle: 142.608  Dist: 0 mm
-Angle: 142.795  Dist: 2744 mm
-Angle: 143.124  Dist: 2752 mm
-Angle: 143.438  Dist: 2768 mm
-Angle: 143.745  Dist: 2792 mm
-Angle: 144.075  Dist: 2800 mm
-Angle: 144.388  Dist: 2828 mm
-Angle: 144.717  Dist: 2848 mm
-Angle: 145.031  Dist: 2836 mm
-Angle: 145.355  Dist: 2848 mm
-Angle: 145.668  Dist: 2864 mm
-Angle: 145.997  Dist: 2872 mm
-Angle: 146.31  Dist: 2876 mm
-Angle: 146.64  Dist: 2912 mm
-Angle: 146.953  Dist: 2916 mm
-Angle: 147.277  Dist: 2888 mm
-Angle: 147.59  Dist: 2892 mm
-Angle: 150.48  Dist: 2924 mm
-Angle: 150.809  Dist: 2936 mm
-Angle: 150.936  Dist: 0 mm
-Angle: 151.139  Dist: 2928 mm
-Angle: 151.26  Dist: 0 mm
-Angle: 151.452  Dist: 2928 mm
-Angle: 151.578  Dist: 0 mm
-Angle: 151.776  Dist: 2928 mm
-Angle: 151.897  Dist: 0 mm
-Angle: 152.216  Dist: 0 mm
-Angle: 152.419  Dist: 2744 mm
-Angle: 152.54  Dist: 0 mm
-Angle: 152.792  Dist: 2724 mm
-Angle: 152.858  Dist: 0 mm
-Angle: 153.105  Dist: 2708 mm
-Angle: 153.177  Dist: 0 mm
-Angle: 153.435  Dist: 2696 mm
-Angle: 153.765  Dist: 2680 mm
-Angle: 154.078  Dist: 2656 mm
-Angle: 154.402  Dist: 2636 mm
-Angle: 154.715  Dist: 2620 mm
-Angle: 155.045  Dist: 2596 mm
-Angle: 155.099  Dist: 0 mm
-Angle: 155.358  Dist: 2580 mm
-Angle: 155.687  Dist: 2580 mm
-Angle: 155.995  Dist: 2568 mm
-Angle: 156.324  Dist: 2560 mm
-Angle: 156.654  Dist: 2584 mm
-Angle: 156.967  Dist: 2596 mm
-Angle: 157.297  Dist: 2608 mm
-Angle: 157.604  Dist: 2616 mm
-Angle: 158.247  Dist: 2624 mm
-Angle: 159.796  Dist: 2740 mm
-Angle: 160.12  Dist: 2748 mm
-Angle: 160.45  Dist: 2760 mm
-Angle: 160.763  Dist: 2776 mm
-Angle: 160.867  Dist: 0 mm
-Angle: 161.093  Dist: 2792 mm
-Angle: 161.505  Dist: 0 mm
-Angle: 161.829  Dist: 0 mm
-Angle: 162.147  Dist: 0 mm
-Angle: 162.263  Dist: 3712 mm
-Angle: 162.466  Dist: 0 mm
-Angle: 162.576  Dist: 3760 mm
-Angle: 162.905  Dist: 3796 mm
-Angle: 163.218  Dist: 3824 mm
-Angle: 163.542  Dist: 3852 mm
-Angle: 163.856  Dist: 3876 mm
-Angle: 164.185  Dist: 3908 mm
-Angle: 164.388  Dist: 0 mm
-Angle: 164.515  Dist: 3920 mm
-Angle: 164.707  Dist: 0 mm
-Angle: 164.828  Dist: 3936 mm
-Angle: 165.031  Dist: 0 mm
-Angle: 165.152  Dist: 3972 mm
-Angle: 165.465  Dist: 4008 mm
-Angle: 165.795  Dist: 4044 mm
-Angle: 166.108  Dist: 4068 mm
-Angle: 166.745  Dist: 4096 mm
-Angle: 167.734  Dist: 1936 mm
-Angle: 168.058  Dist: 1920 mm
-Angle: 168.371  Dist: 1918 mm
-Angle: 168.701  Dist: 1922 mm
-Angle: 169.014  Dist: 1920 mm
-Angle: 169.343  Dist: 1922 mm
-Angle: 169.514  Dist: 0 mm
-Angle: 169.98  Dist: 1922 mm
-Angle: 170.156  Dist: 0 mm
-Angle: 171.26  Dist: 1916 mm
-Angle: 171.59  Dist: 1914 mm
-Angle: 171.903  Dist: 1916 mm
-Angle: 172.233  Dist: 1916 mm
-Angle: 172.397  Dist: 0 mm
-Angle: 172.87  Dist: 1906 mm
-Angle: 173.035  Dist: 0 mm
-Angle: 173.309  Dist: 1738 mm
-Angle: 173.359  Dist: 0 mm
-Angle: 173.622  Dist: 1738 mm
-Angle: 173.677  Dist: 0 mm
-Angle: 173.952  Dist: 1738 mm
-Angle: 174.902  Dist: 1738 mm
-Angle: 175.281  Dist: 0 mm
-Angle: 175.545  Dist: 1718 mm
-Angle: 175.875  Dist: 1718 mm
-Angle: 176.199  Dist: 1720 mm
-Angle: 176.512  Dist: 1718 mm
-Angle: 176.841  Dist: 1730 mm
-Angle: 176.88  Dist: 0 mm
-Angle: 177.155  Dist: 1748 mm
-Angle: 177.198  Dist: 0 mm
-Angle: 177.484  Dist: 1734 mm
-Angle: 177.792  Dist: 1708 mm
-Angle: 177.841  Dist: 0 mm
-Angle: 178.121  Dist: 1710 mm
-Angle: 178.451  Dist: 1716 mm
-Angle: 178.764  Dist: 1710 mm
-Angle: 179.094  Dist: 1712 mm
-Angle: 179.401  Dist: 1712 mm
-Angle: 179.731  Dist: 1730 mm
-Angle: 180  Dist: 1764 mm
-Angle: 180.324  Dist: 1778 mm
-Angle: 180.637  Dist: 1780 mm
-Angle: 180.967  Dist: 1806 mm
-Angle: 181.296  Dist: 1828 mm
-Angle: 181.604  Dist: 1806 mm
-Angle: 182.906  Dist: 1830 mm
-Angle: 183.214  Dist: 1830 mm
-Angle: 183.543  Dist: 1812 mm
-Angle: 183.856  Dist: 1808 mm
-Angle: 184.186  Dist: 1804 mm
-Angle: 184.515  Dist: 1802 mm
-Angle: 184.565  Dist: 0 mm
-Angle: 184.823  Dist: 1804 mm
-Angle: 184.889  Dist: 0 mm
-Angle: 185.153  Dist: 1804 mm
-Angle: 185.208  Dist: 0 mm
-Angle: 185.466  Dist: 1806 mm
-Angle: 186.432  Dist: 1814 mm
-Angle: 187.015  Dist: 3568 mm
-Angle: 187.982  Dist: 3560 mm
-Angle: 188.41  Dist: 0 mm
-Angle: 188.729  Dist: 0 mm
-Angle: 189.371  Dist: 0 mm
-Angle: 189.69  Dist: 0 mm
-Angle: 190.333  Dist: 0 mm
-Angle: 190.651  Dist: 0 mm
-Angle: 191.294  Dist: 0 mm
-Angle: 191.613  Dist: 0 mm
-Angle: 191.843  Dist: 3552 mm
-Angle: 191.931  Dist: 0 mm
-Angle: 192.167  Dist: 3552 mm
-Angle: 192.255  Dist: 0 mm
-Angle: 192.48  Dist: 3552 mm
-Angle: 192.574  Dist: 0 mm
-Angle: 192.81  Dist: 3552 mm
-Angle: 192.892  Dist: 0 mm
-Angle: 193.217  Dist: 0 mm
-Angle: 193.535  Dist: 0 mm
-Angle: 193.777  Dist: 3552 mm
-Angle: 193.854  Dist: 0 mm
-Angle: 194.178  Dist: 0 mm
-Angle: 194.2  Dist: 3036 mm
-Angle: 194.496  Dist: 0 mm
-Angle: 194.859  Dist: 3008 mm
-Angle: 195.123  Dist: 3428 mm
-Angle: 195.699  Dist: 3524 mm
-Angle: 196.073  Dist: 3492 mm
-Angle: 196.095  Dist: 0 mm
-Angle: 196.403  Dist: 3484 mm
-Angle: 196.419  Dist: 0 mm
-Angle: 196.732  Dist: 3484 mm
-Angle: 197.38  Dist: 0 mm
-Angle: 197.682  Dist: 3472 mm
-Angle: 198.342  Dist: 0 mm
-Angle: 198.715  Dist: 2980 mm
-Angle: 199.622  Dist: 3188 mm
-Angle: 199.94  Dist: 0 mm
-Angle: 200.259  Dist: 0 mm
-Angle: 200.901  Dist: 0 mm
-Angle: 201.22  Dist: 0 mm
-Angle: 201.863  Dist: 0 mm
-Angle: 202.181  Dist: 0 mm
-Angle: 202.39  Dist: 546 mm
-Angle: 202.714  Dist: 538 mm
-Angle: 202.824  Dist: 0 mm
-Angle: 203.093  Dist: 530 mm
-Angle: 203.467  Dist: 522 mm
-Angle: 203.796  Dist: 518 mm
-Angle: 204.17  Dist: 512 mm
-Angle: 204.5  Dist: 507 mm
-Angle: 204.807  Dist: 503 mm
-Angle: 205.203  Dist: 498 mm
-Angle: 205.51  Dist: 494 mm
-Angle: 205.889  Dist: 490 mm
-Angle: 206.213  Dist: 486 mm
-Angle: 206.543  Dist: 483 mm
-Angle: 206.917  Dist: 479 mm
-Angle: 207.23  Dist: 476 mm
-Angle: 207.559  Dist: 473 mm
-Angle: 207.933  Dist: 470 mm
-Angle: 208.262  Dist: 467 mm
-Angle: 208.636  Dist: 461 mm
-Angle: 208.965  Dist: 456 mm
-Angle: 209.339  Dist: 455 mm
-Angle: 209.652  Dist: 454 mm
-Angle: 209.982  Dist: 454 mm
-Angle: 210.295  Dist: 453 mm
-Angle: 210.624  Dist: 450 mm
-Angle: 210.998  Dist: 447 mm
-Angle: 211.328  Dist: 444 mm
-Angle: 211.641  Dist: 442 mm
-Angle: 211.965  Dist: 440 mm
-Angle: 212.344  Dist: 438 mm
-Angle: 212.651  Dist: 436 mm
-Angle: 212.981  Dist: 435 mm
-Angle: 213.294  Dist: 433 mm
-Angle: 213.624  Dist: 432 mm
-Angle: 213.997  Dist: 430 mm
-Angle: 214.31  Dist: 429 mm
-Angle: 214.64  Dist: 428 mm
-Angle: 214.953  Dist: 427 mm
-Angle: 215.277  Dist: 425 mm
-Angle: 215.656  Dist: 423 mm
-Angle: 215.964  Dist: 420 mm
-Angle: 216.343  Dist: 415 mm
-Angle: 216.667  Dist: 414 mm
-Angle: 216.98  Dist: 411 mm
-Angle: 217.37  Dist: 407 mm
-Angle: 217.623  Dist: 410 mm
-Angle: 217.886  Dist: 420 mm
-Angle: 218.199  Dist: 0 mm
-Angle: 218.655  Dist: 408 mm
-Angle: 218.969  Dist: 406 mm
-Angle: 219.293  Dist: 406 mm
-Angle: 219.606  Dist: 408 mm
-Angle: 219.935  Dist: 407 mm
-Angle: 220.248  Dist: 406 mm
-Angle: 220.578  Dist: 405 mm
-Angle: 220.952  Dist: 403 mm
-Angle: 221.265  Dist: 401 mm
-Angle: 221.589  Dist: 400 mm
-Angle: 221.902  Dist: 399 mm
-Angle: 222.231  Dist: 397 mm
-Angle: 222.605  Dist: 396 mm
-Angle: 222.918  Dist: 395 mm
-Angle: 223.248  Dist: 394 mm
-Angle: 223.561  Dist: 393 mm
-Angle: 223.89  Dist: 391 mm
-Angle: 224.264  Dist: 390 mm
-Angle: 224.577  Dist: 389 mm
-Angle: 224.901  Dist: 388 mm
-Angle: 225.214  Dist: 387 mm
-Angle: 225.544  Dist: 386 mm
-Angle: 225.857  Dist: 385 mm
-Angle: 226.23  Dist: 384 mm
-Angle: 226.56  Dist: 382 mm
-Angle: 226.873  Dist: 381 mm
-Angle: 227.203  Dist: 380 mm
-Angle: 227.576  Dist: 377 mm
-Angle: 227.889  Dist: 376 mm
-Angle: 228.153  Dist: 380 mm
-Angle: 228.483  Dist: 382 mm
-Angle: 228.796  Dist: 382 mm
-Angle: 229.12  Dist: 382 mm
-Angle: 229.433  Dist: 382 mm
-Angle: 229.763  Dist: 382 mm
-Angle: 230.076  Dist: 382 mm
-Angle: 230.405  Dist: 382 mm
-Angle: 230.718  Dist: 381 mm
-Angle: 231.042  Dist: 380 mm
-Angle: 231.422  Dist: 378 mm
-Angle: 231.647  Dist: 0 mm
-Angle: 231.795  Dist: 371 mm
-Angle: 232.718  Dist: 345 mm
-Angle: 233.091  Dist: 337 mm
-Angle: 233.531  Dist: 331 mm
-Angle: 233.893  Dist: 0 mm
-Angle: 233.904  Dist: 327 mm
-Angle: 234.218  Dist: 324 mm
-Angle: 234.651  Dist: 319 mm
-Angle: 235.514  Dist: 301 mm
-Angle: 235.948  Dist: 296 mm
-Angle: 236.327  Dist: 292 mm
-Angle: 236.7  Dist: 289 mm
-Angle: 237.03  Dist: 288 mm
-Angle: 237.343  Dist: 286 mm
-Angle: 237.717  Dist: 285 mm
-Angle: 238.046  Dist: 283 mm
-Angle: 238.42  Dist: 281 mm
-Angle: 238.793  Dist: 278 mm
-Angle: 239.167  Dist: 275 mm
-Angle: 239.546  Dist: 272 mm
-Angle: 239.87  Dist: 271 mm
-Angle: 240.249  Dist: 270 mm
-Angle: 240.562  Dist: 269 mm
-Angle: 240.936  Dist: 267 mm
-Angle: 241.265  Dist: 267 mm
-Angle: 241.573  Dist: 266 mm
-Angle: 241.902  Dist: 266 mm
-Angle: 242.216  Dist: 266 mm
-Angle: 242.216  Dist: 0 mm
-Angle: 242.479  Dist: 268 mm
-Angle: 242.54  Dist: 0 mm
-Angle: 242.809  Dist: 269 mm
-Angle: 243.122  Dist: 269 mm
-Angle: 243.452  Dist: 270 mm
-Angle: 243.715  Dist: 272 mm
-Angle: 244.671  Dist: 273 mm
-Angle: 244.935  Dist: 274 mm
-Angle: 245.248  Dist: 274 mm
-Angle: 245.621  Dist: 272 mm
-Angle: 245.995  Dist: 270 mm
-Angle: 246.324  Dist: 270 mm
-Angle: 246.638  Dist: 270 mm
-Angle: 246.901  Dist: 271 mm
-Angle: 247.214  Dist: 272 mm
-Angle: 247.544  Dist: 273 mm
-Angle: 247.808  Dist: 274 mm
-Angle: 247.983  Dist: 0 mm
-Angle: 248.121  Dist: 275 mm
-Angle: 248.302  Dist: 0 mm
-Angle: 248.45  Dist: 276 mm
-Angle: 248.703  Dist: 277 mm
-Angle: 249.027  Dist: 278 mm
-Angle: 249.296  Dist: 280 mm
-Angle: 250.203  Dist: 283 mm
-Angle: 250.51  Dist: 284 mm
-Angle: 250.823  Dist: 284 mm
-Angle: 251.153  Dist: 283 mm
-Angle: 251.526  Dist: 282 mm
-Angle: 251.84  Dist: 281 mm
-Angle: 252.169  Dist: 281 mm
-Angle: 252.482  Dist: 282 mm
-Angle: 252.746  Dist: 285 mm
-Angle: 253.015  Dist: 287 mm
-Angle: 253.323  Dist: 288 mm
-Angle: 253.652  Dist: 289 mm
-Angle: 253.922  Dist: 290 mm
-Angle: 254.229  Dist: 290 mm
-Angle: 254.559  Dist: 291 mm
-Angle: 254.762  Dist: 297 mm
-Angle: 255.031  Dist: 0 mm
-Angle: 255.031  Dist: 302 mm
-Angle: 255.295  Dist: 307 mm
-Angle: 255.542  Dist: 310 mm
-Angle: 255.668  Dist: 0 mm
-Angle: 255.811  Dist: 312 mm
-Angle: 255.992  Dist: 0 mm
-Angle: 256.311  Dist: 0 mm
-Angle: 256.448  Dist: 313 mm
-Angle: 256.63  Dist: 0 mm
-Angle: 256.954  Dist: 0 mm
-Angle: 257.272  Dist: 0 mm
-Angle: 257.591  Dist: 0 mm
-Angle: 257.91  Dist: 0 mm
-Angle: 258.234  Dist: 0 mm
-Angle: 258.481  Dist: 606 mm
-Angle: 258.552  Dist: 0 mm
-Angle: 258.794  Dist: 604 mm
-Angle: 258.871  Dist: 0 mm
-Angle: 259.124  Dist: 606 mm
-Angle: 259.195  Dist: 0 mm
-Angle: 260.475  Dist: 0 mm
-Angle: 260.793  Dist: 0 mm
-Angle: 261.118  Dist: 0 mm
-Angle: 261.387  Dist: 471 mm
-Angle: 261.436  Dist: 0 mm
-Angle: 261.7  Dist: 466 mm
-Angle: 262.073  Dist: 462 mm
-Angle: 262.403  Dist: 459 mm
-Angle: 262.716  Dist: 457 mm
-Angle: 263.09  Dist: 454 mm
-Angle: 263.419  Dist: 452 mm
-Angle: 263.732  Dist: 451 mm
-Angle: 264.062  Dist: 450 mm
-Angle: 264.375  Dist: 448 mm
-Angle: 264.749  Dist: 445 mm
-Angle: 265.078  Dist: 443 mm
-Angle: 265.386  Dist: 441 mm
-Angle: 265.765  Dist: 439 mm
-Angle: 266.078  Dist: 436 mm
-Angle: 266.402  Dist: 435 mm
-Angle: 266.715  Dist: 438 mm
-Angle: 267.045  Dist: 436 mm
-Angle: 267.418  Dist: 428 mm
-Angle: 267.792  Dist: 422 mm
-Angle: 268.105  Dist: 420 mm
-Angle: 268.434  Dist: 421 mm
-Angle: 268.748  Dist: 423 mm
-Angle: 269.011  Dist: 426 mm
-Angle: 269.341  Dist: 428 mm
-Angle: 269.654  Dist: 429 mm
-Angle: 269.918  Dist: 433 mm
-Angle: 270.231  Dist: 435 mm
-Angle: 270.56  Dist: 434 mm
-Angle: 270.873  Dist: 434 mm
-Angle: 271.203  Dist: 432 mm
-Angle: 271.577  Dist: 431 mm
-Angle: 271.824  Dist: 433 mm
-Angle: 272.153  Dist: 437 mm
-Angle: 272.417  Dist: 440 mm
-Angle: 272.73  Dist: 440 mm
-Angle: 273.043  Dist: 444 mm
-Angle: 273.312  Dist: 454 mm
-Angle: 273.576  Dist: 463 mm
-Angle: 274.153  Dist: 469 mm
-Angle: 274.246  Dist: 0 mm
-Angle: 274.889  Dist: 0 mm
-Angle: 275.208  Dist: 0 mm
-Angle: 275.526  Dist: 0 mm
-Angle: 275.85  Dist: 0 mm
-Angle: 275.856  Dist: 1172 mm
-Angle: 276.169  Dist: 0 mm
-Angle: 276.229  Dist: 1166 mm
-Angle: 276.487  Dist: 0 mm
-Angle: 276.559  Dist: 1162 mm
-Angle: 276.812  Dist: 0 mm
-Angle: 276.872  Dist: 1160 mm
-Angle: 277.13  Dist: 0 mm
-Angle: 277.185  Dist: 1158 mm
-Angle: 277.449  Dist: 0 mm
-Angle: 277.515  Dist: 1158 mm
-Angle: 277.767  Dist: 0 mm
-Angle: 277.828  Dist: 1162 mm
-Angle: 278.135  Dist: 1162 mm
-Angle: 278.465  Dist: 1162 mm
-Angle: 278.778  Dist: 1164 mm
-Angle: 279.091  Dist: 1170 mm
-Angle: 279.355  Dist: 1174 mm
-Angle: 279.998  Dist: 1180 mm
-Angle: 281.624  Dist: 1614 mm
-Angle: 281.931  Dist: 0 mm
-Angle: 282.574  Dist: 0 mm
-Angle: 282.892  Dist: 0 mm
-Angle: 283.217  Dist: 0 mm
-Angle: 283.535  Dist: 0 mm
-Angle: 283.854  Dist: 0 mm
-Angle: 284.496  Dist: 0 mm
-Angle: 284.815  Dist: 0 mm
-Angle: 285.134  Dist: 0 mm
-Angle: 285.458  Dist: 0 mm
-Angle: 285.776  Dist: 0 mm
-Angle: 286.095  Dist: 0 mm
-Angle: 286.419  Dist: 0 mm
-Angle: 286.738  Dist: 0 mm
-Angle: 287.056  Dist: 0 mm
-Angle: 287.38  Dist: 0 mm
-Angle: 287.699  Dist: 0 mm
-Angle: 288.018  Dist: 0 mm
-Angle: 288.342  Dist: 0 mm
-Angle: 288.66  Dist: 0 mm
-Angle: 288.979  Dist: 0 mm
-Angle: 289.297  Dist: 0 mm
-Angle: 289.622  Dist: 0 mm
-Angle: 289.94  Dist: 0 mm
-Angle: 290.045  Dist: 840 mm
-Angle: 290.259  Dist: 0 mm
-Angle: 290.583  Dist: 0 mm
-Angle: 290.901  Dist: 0 mm
-Angle: 290.995  Dist: 826 mm
-Angle: 291.22  Dist: 0 mm
-Angle: 291.544  Dist: 0 mm
-Angle: 291.995  Dist: 812 mm
-Angle: 292.181  Dist: 0 mm
-Angle: 292.505  Dist: 0 mm
-Angle: 293.143  Dist: 0 mm
-Angle: 293.461  Dist: 0 mm
-Angle: 294.104  Dist: 0 mm
-Angle: 294.423  Dist: 0 mm
-Angle: 294.747  Dist: 0 mm
-Angle: 295.065  Dist: 0 mm
-Angle: 295.384  Dist: 0 mm
-Angle: 295.708  Dist: 0 mm
-Angle: 296.027  Dist: 0 mm
-Angle: 296.345  Dist: 0 mm
-Angle: 296.664  Dist: 0 mm
-Angle: 296.988  Dist: 0 mm
-Angle: 297.307  Dist: 0 mm
-Angle: 297.625  Dist: 0 mm
-Angle: 297.949  Dist: 0 mm
-Angle: 298.268  Dist: 0 mm
-Angle: 298.586  Dist: 0 mm
-Angle: 298.911  Dist: 0 mm
-Angle: 299.229  Dist: 0 mm
-Angle: 299.548  Dist: 0 mm
-Angle: 299.872  Dist: 0 mm
-Angle: 300.19  Dist: 0 mm
-Angle: 300.509  Dist: 0 mm
-Angle: 300.828  Dist: 0 mm
-Angle: 301.152  Dist: 0 mm
-Angle: 301.47  Dist: 0 mm
-Angle: 301.789  Dist: 0 mm
-Angle: 302.113  Dist: 0 mm
-Angle: 302.432  Dist: 0 mm
-Angle: 302.75  Dist: 0 mm
-Angle: 303.074  Dist: 0 mm
-Angle: 303.393  Dist: 0 mm
-Angle: 303.712  Dist: 0 mm
-Angle: 304.036  Dist: 0 mm
-Angle: 304.354  Dist: 0 mm
-Angle: 304.673  Dist: 0 mm
-Angle: 304.991  Dist: 0 mm
-Angle: 305.316  Dist: 0 mm
-Angle: 305.634  Dist: 0 mm
-Angle: 305.953  Dist: 0 mm
-Angle: 306.277  Dist: 0 mm
-Angle: 306.595  Dist: 0 mm
-Angle: 306.914  Dist: 0 mm
-Angle: 307.238  Dist: 0 mm
-Angle: 307.557  Dist: 0 mm
-Angle: 307.7  Dist: 451 mm
-Angle: 307.875  Dist: 0 mm
-Angle: 308.518  Dist: 0 mm
-Angle: 308.837  Dist: 0 mm
-Angle: 309.155  Dist: 0 mm
-Angle: 309.479  Dist: 0 mm
-Angle: 309.798  Dist: 0 mm
-Angle: 310.117  Dist: 0 mm
-Angle: 310.441  Dist: 0 mm
-Angle: 310.759  Dist: 0 mm
-Angle: 311.078  Dist: 0 mm
-Angle: 311.402  Dist: 0 mm
-Angle: 311.682  Dist: 474 mm
-Angle: 311.721  Dist: 0 mm
-Angle: 312.012  Dist: 473 mm
-Angle: 312.039  Dist: 0 mm
-Angle: 312.385  Dist: 472 mm
-Angle: 313.319  Dist: 0 mm
-Angle: 313.643  Dist: 0 mm
-Angle: 313.962  Dist: 0 mm
-Angle: 314.28  Dist: 0 mm
-Angle: 314.604  Dist: 0 mm
-Angle: 314.923  Dist: 0 mm
-Angle: 315.242  Dist: 0 mm
-Angle: 315.566  Dist: 0 mm
-Angle: 315.884  Dist: 0 mm
-Angle: 316.203  Dist: 0 mm
-Angle: 316.23  Dist: 702 mm
-Angle: 316.522  Dist: 0 mm
-Angle: 316.846  Dist: 0 mm
-Angle: 317.164  Dist: 0 mm
-Angle: 317.483  Dist: 0 mm
-Angle: 317.714  Dist: 483 mm
-Angle: 318.043  Dist: 483 mm
-Angle: 318.126  Dist: 0 mm
-Angle: 318.356  Dist: 486 mm
-Angle: 318.999  Dist: 489 mm
-Angle: 319.406  Dist: 0 mm
-Angle: 320.048  Dist: 0 mm
-Angle: 320.367  Dist: 0 mm
-Angle: 320.652  Dist: 878 mm
-Angle: 320.685  Dist: 0 mm
-Angle: 321.01  Dist: 0 mm
-Angle: 321.328  Dist: 0 mm
-Angle: 321.608  Dist: 866 mm
-Angle: 321.647  Dist: 0 mm
-Angle: 321.971  Dist: 0 mm
-Angle: 321.982  Dist: 846 mm
-Angle: 322.289  Dist: 0 mm
-Angle: 322.311  Dist: 832 mm
-Angle: 322.625  Dist: 826 mm
-Angle: 322.932  Dist: 0 mm
-Angle: 322.998  Dist: 816 mm
-Angle: 323.251  Dist: 0 mm
-Angle: 323.635  Dist: 800 mm
-Angle: 324.651  Dist: 792 mm
-Angle: 325.173  Dist: 0 mm
-Angle: 325.811  Dist: 0 mm
-Angle: 326.135  Dist: 0 mm
-Angle: 326.371  Dist: 744 mm
-Angle: 326.684  Dist: 740 mm
-Angle: 326.772  Dist: 0 mm
-Angle: 327.014  Dist: 732 mm
-Angle: 327.096  Dist: 0 mm
-Angle: 327.327  Dist: 726 mm
-Angle: 327.415  Dist: 0 mm
-Angle: 327.7  Dist: 720 mm
-Angle: 327.733  Dist: 0 mm
-Angle: 328.03  Dist: 716 mm
-Angle: 328.343  Dist: 710 mm
-Angle: 328.667  Dist: 704 mm
-Angle: 330.183  Dist: 554 mm
-Angle: 330.37  Dist: 680 mm
-Angle: 330.617  Dist: 0 mm
-Angle: 330.699  Dist: 672 mm
-Angle: 330.936  Dist: 0 mm
-Angle: 331.013  Dist: 668 mm
-Angle: 331.403  Dist: 664 mm
-Angle: 331.578  Dist: 0 mm
-Angle: 331.716  Dist: 660 mm
-Angle: 332.045  Dist: 656 mm
-Angle: 332.682  Dist: 652 mm
-Angle: 333.82  Dist: 0 mm
-Angle: 334.462  Dist: 0 mm
-Angle: 334.781  Dist: 0 mm
-Angle: 335.424  Dist: 0 mm
-Angle: 336.379  Dist: 0 mm
-Angle: 336.703  Dist: 0 mm
-Angle: 337.022  Dist: 0 mm
-Angle: 337.341  Dist: 0 mm
-Angle: 337.665  Dist: 0 mm
-Angle: 337.983  Dist: 0 mm
-Angle: 338.302  Dist: 0 mm
-Angle: 338.401  Dist: 201 mm
-Angle: 338.626  Dist: 0 mm
-Angle: 338.945  Dist: 0 mm
-Angle: 339.17  Dist: 198 mm
-Angle: 339.263  Dist: 0 mm
-Angle: 339.587  Dist: 0 mm
-Angle: 339.593  Dist: 195 mm
-Angle: 339.906  Dist: 0 mm
-Angle: 340.225  Dist: 0 mm
-Angle: 340.543  Dist: 0 mm
-Angle: 342.147  Dist: 0 mm
-Angle: 342.466  Dist: 0 mm
-Angle: 343.109  Dist: 0 mm
-Angle: 343.427  Dist: 0 mm
-Angle: 343.746  Dist: 0 mm
-Angle: 344.07  Dist: 0 mm
-Angle: 344.388  Dist: 0 mm
-Angle: 344.707  Dist: 0 mm
-Angle: 344.795  Dist: 184 mm
-Angle: 345.031  Dist: 0 mm
-Angle: 345.35  Dist: 0 mm
-Angle: 345.515  Dist: 175 mm
-Angle: 345.668  Dist: 0 mm
-Angle: 345.778  Dist: 176 mm
-Angle: 345.992  Dist: 0 mm
-Angle: 346.042  Dist: 177 mm
-Angle: 346.311  Dist: 0 mm
-Angle: 346.63  Dist: 0 mm
-Angle: 346.954  Dist: 0 mm
-Angle: 346.998  Dist: 177 mm
-Angle: 347.272  Dist: 0 mm
-Angle: 347.591  Dist: 0 mm
-Angle: 347.91  Dist: 0 mm
-Angle: 348.234  Dist: 0 mm
-Angle: 348.552  Dist: 0 mm
-Angle: 348.871  Dist: 0 mm
-Angle: 352.073  Dist: 0 mm
-Angle: 352.716  Dist: 0 mm
-Angle: 352.969  Dist: 189 mm
-Angle: 353.035  Dist: 0 mm
-Angle: 353.167  Dist: 191 mm
-Angle: 353.359  Dist: 0 mm
-Angle: 353.496  Dist: 192 mm
-Angle: 353.677  Dist: 0 mm
-Angle: 353.749  Dist: 193 mm
-Angle: 353.996  Dist: 0 mm
-Angle: 354.012  Dist: 195 mm
-Angle: 354.276  Dist: 196 mm
-Angle: 354.32  Dist: 0 mm
-Angle: 354.545  Dist: 198 mm
-Angle: 354.639  Dist: 0 mm
-Angle: 354.749  Dist: 200 mm
-Angle: 354.957  Dist: 0 mm
-Angle: 355.012  Dist: 202 mm
-Angle: 355.281  Dist: 0 mm
-Angle: 355.545  Dist: 205 mm
-Angle: 355.6  Dist: 0 mm
-Angle: 355.919  Dist: 0 mm
-Angle: 356.237  Dist: 0 mm
-Angle: 356.561  Dist: 0 mm
-Angle: 356.88  Dist: 0 mm
-Angle: 357.198  Dist: 0 mm
-Angle: 357.523  Dist: 0 mm
-Angle: 357.841  Dist: 0 mm
-Angle: 358.198  Dist: 381 mm
-Angle: 358.511  Dist: 381 mm
-Angle: 358.841  Dist: 381 mm
-Angle: 359.154  Dist: 380 mm
-Angle: 359.484  Dist: 380 mm
-Angle: 359.797  Dist: 380 mm
+0.214233,380
+0.543823,379
+0.856934,380
+1.10962,0
+1.42822,0
+1.74683,0
+2.07092,0
+2.15332,458
+2.38953,0
+2.46643,457
+2.79602,456
+3.16956,455
+3.48267,455
+3.79578,453
+4.11987,452
+4.43298,453
+4.76257,452
+5.07568,451
+5.38879,451
+5.71838,452
+6.026,453
+6.84998,0
+6.98181,454
+7.16858,0
+7.80579,0
+8.12439,0
+8.44299,0
+8.76709,0
+9.08569,0
+9.4043,0
+9.7229,0
+10.0415,0
+10.3601,0
+10.6787,0
+10.9973,0
+11.3159,0
+11.6345,0
+11.9531,0
+12.2717,0
+12.5903,0
+12.9089,0
+13.2275,0
+13.5461,0
+13.8647,0
+14.1833,0
+14.502,0
+14.8206,0
+15.1392,0
+15.4633,0
+15.7819,0
+16.1005,0
+16.4191,0
+16.7377,0
+17.0563,0
+17.3749,0
+17.6935,0
+18.0121,0
+18.3307,0
+18.6493,0
+18.9679,0
+19.2865,0
+19.6051,0
+19.9237,0
+20.2423,0
+20.5609,0
+20.8795,0
+21.1981,0
+21.5167,0
+21.8353,0
+22.1594,0
+22.478,0
+22.7966,0
+23.1152,0
+23.4338,0
+23.7524,0
+24.071,0
+24.3896,0
+24.7083,0
+25.0269,0
+25.3455,0
+25.6641,0
+25.9827,0
+26.3013,0
+26.6199,0
+26.9385,0
+27.2571,0
+27.5757,0
+27.8943,0
+28.2129,0
+28.8556,0
+29.1742,0
+29.4928,0
+29.8114,0
+30.13,0
+30.4486,0
+30.7672,0
+31.0858,0
+31.4044,0
+31.723,0
+32.0416,0
+32.3602,0
+32.6788,0
+39.0289,99
+42.8247,104
+43.1543,104
+43.3575,105
+43.6871,105
+43.8245,106
+44.1541,106
+44.3573,107
+44.6704,107
+44.8737,108
+45.1978,108
+45.401,109
+45.7306,109
+45.9338,110
+46.2469,110
+46.4667,111
+46.7798,111
+46.983,112
+47.2028,113
+47.5104,113
+47.7136,114
+48.0432,114
+48.2465,115
+48.576,115
+48.8892,115
+49.0924,116
+49.3561,117
+49.6857,117
+49.8889,118
+50.2185,118
+50.4218,119
+50.625,120
+50.8557,0
+50.9491,120
+51.1743,0
+51.2018,121
+51.5259,121
+51.7291,122
+51.8115,0
+52.0587,122
+52.1301,0
+52.262,123
+52.5751,123
+52.7673,0
+52.8387,124
+53.0585,125
+53.0859,0
+53.3716,125
+53.4045,0
+53.6353,126
+53.7231,0
+53.8385,127
+54.0417,0
+54.1681,127
+54.3604,0
+54.4373,128
+54.679,0
+54.7449,128
+54.9481,129
+54.9976,0
+55.2173,130
+55.3162,0
+55.5469,130
+55.6403,0
+55.7446,131
+55.9589,0
+56.0138,132
+56.2775,0
+56.3434,132
+56.5466,133
+56.5961,0
+56.8542,133
+56.9147,0
+57.1234,134
+57.2333,0
+57.3871,135
+57.5519,0
+57.8705,0
+58.1891,0
+58.233,136
+58.5077,0
+58.8263,0
+59.09,138
+59.1449,0
+59.4635,0
+59.7821,0
+60.1007,0
+60.4193,0
+60.7379,0
+61.0565,0
+61.3751,0
+61.6937,0
+62.0123,0
+62.3364,0
+62.655,0
+62.9736,0
+63.2922,0
+63.6108,0
+63.9294,0
+64.248,0
+64.2645,566
+64.5667,0
+64.5776,566
+64.8853,0
+64.9017,570
+65.1709,572
+65.484,574
+65.7916,576
+66.1212,578
+66.4343,582
+66.698,586
+67.0111,588
+67.3407,590
+67.6538,594
+67.9834,598
+68.2306,602
+68.5602,604
+68.8733,606
+69.2029,610
+69.5105,614
+69.7797,618
+70.0928,620
+70.4169,624
+70.73,628
+70.9991,632
+71.3123,636
+72.2791,640
+72.8558,0
+73.1744,0
+73.8116,0
+74.1302,0
+74.4489,0
+74.7675,0
+75.0861,0
+75.4102,0
+75.7288,0
+76.0474,0
+76.366,0
+76.6846,0
+81.9635,166
+82.2766,166
+82.6062,166
+82.8589,167
+83.183,167
+83.4521,168
+83.7653,168
+84.0289,169
+84.342,169
+84.6716,169
+84.9188,170
+85.1825,171
+85.5121,171
+85.7648,172
+86.0889,172
+86.402,173
+86.6711,174
+86.9843,174
+87.2479,175
+87.5775,175
+87.8247,176
+88.0884,177
+88.418,177
+88.7311,178
+88.9948,179
+89.3079,179
+89.577,180
+89.8407,181
+90.1538,182
+90.4834,182
+90.7306,183
+90.9998,184
+91.2634,185
+91.5765,186
+91.8402,187
+92.1533,187
+92.417,188
+92.7466,189
+92.9993,190
+93.2629,191
+93.576,192
+93.8397,193
+94.1089,194
+94.4165,194
+94.7461,195
+94.9988,196
+95.2625,197
+95.592,198
+95.8392,199
+96.1084,200
+96.4325,201
+96.6852,202
+97.0148,203
+97.262,204
+97.5311,205
+97.8552,206
+98.1079,208
+98.3716,209
+98.7012,210
+98.9484,211
+99.2175,212
+99.4812,214
+99.7943,215
+99.9591,0
+100.058,216
+100.371,217
+100.596,0
+100.64,218
+100.915,0
+100.964,219
+101.217,221
+101.234,0
+101.481,223
+101.552,0
+101.75,224
+101.871,0
+102.057,225
+102.195,0
+102.327,227
+102.513,0
+102.832,0
+102.854,230
+103.151,0
+103.469,0
+103.788,0
+104.106,0
+104.623,383
+104.952,383
+105.266,383
+105.59,383
+105.903,383
+106.216,384
+106.337,0
+106.655,0
+108.918,258
+109.292,256
+109.671,253
+109.984,252
+110.418,248
+110.841,242
+111.324,235
+111.824,229
+112.247,225
+112.687,221
+113.104,216
+113.544,213
+113.983,209
+114.406,206
+114.78,204
+115.153,203
+115.527,200
+115.966,198
+116.224,0
+116.389,194
+116.862,0
+116.873,190
+117.18,0
+117.312,187
+117.499,0
+117.686,185
+117.817,0
+117.949,187
+118.136,0
+118.218,189
+118.422,191
+118.669,193
+118.773,0
+118.932,195
+119.092,0
+119.136,197
+119.405,199
+119.41,0
+119.729,0
+119.982,201
+120.048,0
+120.366,0
+121.003,0
+121.278,221
+122.717,253
+123.404,250
+123.668,251
+123.997,251
+124.31,252
+124.623,252
+124.953,253
+125.261,253
+125.469,0
+125.59,253
+125.788,0
+125.903,253
+126.167,254
+126.48,256
+126.793,256
+127.123,254
+128.249,248
+128.622,244
+128.936,244
+129.309,243
+129.617,0
+129.622,242
+129.996,241
+130.254,0
+130.325,240
+130.573,0
+130.638,240
+130.952,239
+131.281,239
+131.589,239
+132.231,240
+132.968,249
+133.341,248
+133.654,247
+133.967,246
+134.341,245
+134.396,0
+134.67,244
+134.984,244
+135.033,0
+135.357,243
+135.357,0
+135.676,0
+135.687,242
+135.994,0
+136,242
+136.307,242
+136.313,0
+136.631,0
+136.89,244
+136.95,0
+137.269,0
+137.587,0
+137.906,0
+138.224,0
+138.543,0
+138.862,0
+139.18,0
+139.499,0
+139.818,0
+140.136,0
+140.455,0
+140.652,2748
+140.773,0
+141.026,2720
+141.092,0
+141.339,2716
+141.411,0
+141.669,2708
+141.729,0
+141.982,2716
+142.053,0
+142.295,2724
+142.372,0
+142.625,2732
+142.69,0
+142.888,2748
+143.009,0
+143.201,2752
+143.328,0
+143.514,2756
+143.839,2760
+144.152,2764
+144.465,2780
+144.794,2796
+145.107,2792
+145.437,2812
+145.745,2832
+146.074,2852
+146.387,2868
+146.7,2868
+147.03,2880
+147.343,2856
+147.667,2852
+147.98,2876
+148.31,2880
+148.953,2920
+151.183,2996
+151.496,2992
+151.617,0
+151.826,2960
+152.139,2972
+152.254,0
+152.468,2980
+152.573,0
+152.776,2940
+152.891,0
+153.21,0
+153.419,2740
+153.528,0
+153.792,2716
+153.847,0
+154.122,2700
+154.435,2680
+154.764,2664
+155.078,2644
+155.391,2624
+155.715,2612
+156.028,2596
+156.083,0
+156.357,2576
+156.671,2556
+156.995,2552
+157.308,2568
+157.637,2592
+157.95,2608
+158.28,2604
+158.593,2616
+159.543,2632
+160.51,2684
+160.779,2736
+161.093,2752
+161.417,2768
+161.73,2792
+161.818,0
+162.142,0
+162.372,2800
+162.779,0
+163.098,0
+163.218,3732
+163.542,3764
+163.856,3792
+164.169,3820
+164.498,3844
+164.811,3872
+165.009,0
+165.135,3908
+165.449,3912
+165.646,0
+165.778,3928
+165.965,0
+166.091,3972
+166.421,3992
+166.734,4036
+167.058,4080
+168.668,1932
+168.981,1922
+169.31,1920
+169.623,1922
+169.953,1916
+170.261,1918
+170.431,0
+170.75,0
+171.068,0
+171.233,1918
+172.183,1916
+172.496,1916
+172.826,1914
+173.139,1912
+173.298,0
+173.469,1904
+173.617,0
+174.216,1738
+174.254,0
+174.529,1740
+174.573,0
+174.858,1740
+175.172,1740
+176.451,1718
+176.49,0
+176.781,1718
+177.089,1718
+177.402,1718
+177.731,1726
+178.044,1744
+178.083,0
+178.374,1734
+178.401,0
+178.72,0
+179.011,1698
+179.324,1726
+179.654,1710
+179.967,1712
+180.297,1708
+180.604,1724
+180.934,1756
+181.187,1776
+181.269,0
+181.511,1778
+181.824,1804
+182.153,1828
+182.466,1826
+182.796,1812
+183.433,1856
+183.746,1838
+184.076,1826
+184.389,1810
+184.702,1810
+185.026,1806
+185.339,1804
+185.669,1800
+185.735,0
+185.982,1798
+186.312,1802
+186.625,1818
+187.592,1826
+188.152,3552
+189.564,0
+189.882,0
+190.519,0
+190.838,0
+191.475,0
+191.794,0
+192.112,0
+192.431,0
+192.75,0
+193.068,0
+193.26,3552
+193.387,0
+193.59,3552
+193.705,0
+193.903,3552
+194.024,0
+194.343,0
+194.661,0
+194.98,0
+195.298,0
+195.623,0
+195.941,0
+196.199,3408
+196.512,3504
+196.776,3552
+197.106,3552
+197.216,0
+197.479,3512
+197.534,0
+197.792,3512
+197.853,0
+198.171,0
+198.49,0
+198.809,0
+199.781,3072
+200.671,3184
+201.039,0
+201.357,0
+201.676,0
+201.687,2932
+201.995,0
+202.28,3436
+202.319,0
+202.593,3432
+202.917,3440
+202.956,0
+203.231,3424
+203.275,0
+203.544,3440
+203.873,3444
+203.912,0
+204.186,3432
+204.23,0
+204.51,3432
+204.868,0
+205.466,3432
+207.339,836
+207.653,834
+207.735,0
+207.982,832
+208.054,0
+208.295,830
+208.625,826
+208.696,0
+208.932,822
+209.312,816
+209.625,816
+209.949,816
+210.262,818
+210.531,824
+210.839,832
+211.168,838
+211.481,846
+211.745,854
+212.058,860
+212.388,868
+212.701,874
+212.964,882
+213.278,888
+213.607,896
+213.92,898
+214.25,908
+214.497,916
+214.827,914
+215.14,914
+215.464,916
+215.777,918
+216.09,922
+217.062,924
+217.656,776
+218.26,0
+218.403,724
+218.578,0
+218.776,710
+219.089,704
+219.468,696
+219.534,0
+219.792,686
+220.155,682
+220.479,676
+220.792,668
+221.171,662
+221.495,656
+221.808,650
+222.188,644
+222.495,640
+222.825,634
+223.511,628
+224.319,0
+224.324,578
+224.637,574
+224.951,572
+224.956,0
+225.654,560
+226.203,518
+226.23,0
+226.577,510
+226.89,504
+227.263,500
+227.576,496
+227.906,493
+228.279,489
+228.593,487
+228.917,484
+229.296,482
+229.609,481
+229.922,480
+230.246,478
+230.559,475
+230.889,474
+231.246,472
+231.575,470
+231.888,468
+232.218,467
+232.531,466
+232.839,465
+233.168,464
+233.542,463
+233.855,463
+234.185,463
+234.498,462
+234.811,460
+235.14,460
+235.448,460
+235.778,459
+236.091,458
+236.404,457
+236.733,458
+237.047,457
+237.371,456
+237.684,457
+237.997,458
+238.326,457
+238.64,456
+238.964,457
+239.277,457
+239.59,456
+239.963,455
+240.293,455
+240.606,455
+240.936,455
+241.249,455
+241.512,456
+241.826,456
+242.155,456
+242.468,456
+242.842,455
+243.155,455
+243.479,455
+243.748,456
+244.061,456
+244.374,456
+244.698,458
+245.012,456
+245.341,456
+245.654,461
+245.984,462
+246.292,458
+246.605,458
+246.934,459
+247.247,460
+247.577,463
+247.824,465
+248.154,465
+248.467,465
+248.796,466
+249.104,468
+249.417,468
+249.747,468
+250.06,469
+250.389,471
+250.637,473
+251.016,472
+251.34,472
+251.609,473
+251.917,474
+252.23,475
+252.559,476
+252.872,480
+253.202,482
+253.515,478
+253.828,478
+254.092,488
+254.421,488
+254.795,481
+255.059,483
+255.372,486
+255.685,489
+256.014,491
+256.278,494
+256.591,497
+256.904,498
+257.234,500
+257.542,501
+257.811,503
+258.124,504
+258.448,506
+258.761,507
+259.091,508
+259.404,510
+259.717,512
+260.046,512
+260.31,514
+260.623,516
+260.953,518
+261.26,520
+261.573,522
+261.843,526
+262.167,534
+262.419,540
+262.749,542
+263.062,546
+264.177,0
+264.496,0
+264.814,0
+264.919,554
+265.133,0
+265.182,560
+265.452,0
+265.562,556
+265.875,552
+266.199,550
+266.578,546
+266.885,546
+267.198,546
+267.528,544
+267.841,542
+268.171,540
+268.484,540
+268.792,540
+269.121,542
+269.434,540
+269.764,538
+270.077,536
+270.39,538
+270.703,540
+271.011,540
+271.34,540
+271.653,540
+271.967,540
+272.28,542
+272.593,544
+272.906,544
+273.23,546
+273.543,546
+273.796,548
+274.109,548
+274.433,550
+274.746,550
+275.059,552
+275.372,554
+275.685,556
+275.949,560
+276.262,560
+276.575,562
+276.888,564
+277.202,570
+277.465,576
+277.778,580
+278.042,586
+278.355,594
+278.981,596
+279.8,0
+280.327,1176
+280.437,0
+280.651,1184
+280.756,0
+281.074,0
+281.393,0
+281.711,0
+282.036,0
+282.261,1602
+282.354,0
+283.31,0
+283.629,0
+283.947,0
+284.266,0
+284.584,0
+285.222,0
+285.54,0
+285.859,0
+286.177,0
+286.496,0
+286.815,0
+287.133,0
+287.452,0
+287.77,0
+288.089,0
+288.408,0
+288.732,0
+289.05,0
+289.369,0
+289.688,0
+290.006,0
+290.325,0
+290.643,0
+290.962,0
+291.281,0
+291.599,0
+291.918,0
+292.236,0
+292.555,0
+292.874,0
+293.192,0
+293.511,0
+293.829,0
+294.148,0
+294.467,0
+294.785,0
+295.104,0
+295.428,0
+295.746,0
+296.065,0
+296.384,0
+296.702,0
+297.021,0
+297.12,740
+297.339,0
+297.449,726
+297.658,0
+297.977,0
+298.295,0
+298.614,0
+299.075,716
+299.388,708
+299.57,0
+299.888,0
+300.207,0
+300.526,0
+301.481,0
+301.8,0
+302.124,0
+302.443,0
+302.761,0
+303.08,0
+303.398,0
+303.717,0
+304.036,0
+304.354,0
+304.673,0
+304.991,0
+305.31,0
+305.629,0
+305.947,0
+306.266,0
+306.584,0
+306.903,0
+307.222,0
+307.54,0
+307.859,0
+308.123,580
+308.177,0
+308.452,578
+308.496,0
+308.82,0
+309.139,0
+309.402,576
+310.095,0
+310.199,620
+310.413,0
+311.05,0
+311.369,0
+312.006,0
+312.325,0
+312.643,0
+312.858,588
+312.962,0
+313.171,588
+313.281,0
+313.599,0
+313.918,0
+314.138,590
+314.874,0
+315.192,0
+315.835,0
+316.154,0
+316.472,0
+316.604,706
+316.791,0
+316.983,702
+317.109,0
+317.307,698
+317.428,0
+317.62,698
+317.747,0
+317.933,698
+318.065,0
+318.263,700
+318.576,702
+319.669,934
+319.982,922
+320.356,910
+320.614,0
+320.685,900
+320.933,0
+320.999,892
+321.251,0
+321.328,882
+321.57,0
+322.015,874
+322.328,862
+323.031,842
+323.339,830
+323.668,822
+323.806,0
+324.042,812
+324.355,804
+324.668,798
+324.761,0
+325.042,790
+326.014,788
+327.014,748
+327.31,0
+327.387,740
+327.629,0
+327.717,736
+328.03,730
+328.266,0
+328.359,726
+328.585,0
+328.733,718
+329.046,712
+329.359,708
+329.996,706
+331.013,684
+331.386,678
+331.458,0
+331.699,672
+332.029,668
+332.095,0
+332.402,662
+332.413,0
+332.715,658
+333.045,652
+333.995,652
+334.962,0
+335.281,0
+335.923,0
+336.242,0
+336.879,0
+337.198,0
+337.516,0
+337.835,0
+338.154,0
+338.791,0
+339.109,0
+339.73,200
+339.747,0
+340.065,0
+340.384,0
+340.703,0
+341.021,0
+341.34,0
+341.658,0
+341.977,0
+342.026,190
+343.043,188
+343.575,0
+343.894,0
+344.213,0
+344.531,0
+344.85,0
+345.168,0
+345.487,0
+345.806,0
+346.124,0
+346.371,177
+346.443,0
+346.745,176
+346.761,0
+346.998,177
+347.327,178
+347.399,0
+347.717,0
+348.036,0
+348.354,0
+348.679,0
+349.316,0
+349.634,0
+349.953,0
+350.272,0
+350.81,185
+352.716,185
+353.139,0
+353.458,0
+353.776,0
+354.095,0
+354.199,189
+354.402,192
+354.413,0
+354.672,193
+354.732,0
+354.935,194
+355.051,0
+355.248,195
+355.375,0
+355.468,197
+355.693,0
+355.715,199
+355.979,201
+356.012,0
+356.331,0
+356.649,0
+356.968,0
+357.286,0
+357.605,0
+357.924,0
+358.242,0
+358.561,0
+358.879,0
+359.264,381
+359.577,381
+359.901,380
