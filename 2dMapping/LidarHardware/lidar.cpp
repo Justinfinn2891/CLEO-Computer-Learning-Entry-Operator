@@ -5,6 +5,11 @@
 
 using namespace sl;
 
+/* GOALS:
+1.) We need to put together our lidar camera to try to handle 3d computing
+2.) We need to start implementing the coordinates to send to the csv file
+3.) We need to get the iterative closest point algorithm working*/
+
 int findX(const float &angle, const float &distance);
 int findY(const float &angle, const float &distance);
 int findZ(const float &angle, const float &distance);
