@@ -1,109 +1,85 @@
-#include "rplidar.h" // Need for the functions in the SDK
+#include "sl_lidar.h"
+#include "sl_lidar_driver.h"
+
 #include <iostream>
 #include <fstream>
-#include <string> 
-/* For the objects we are going to make*/
-using namespace rp::standalone::rplidar;
+#include <cmath>
 
-
+using namespace sl;
 /*
-FOR THE LIBRARY LATER: 
-
-1.) sudo apt update 
-sudo apt install build-essentials (kimble)
-
-g++ mylidar.cpp -o mylidar -I./sdk/include -L./sdk/lib -lrplidar_sdk -lpthread
-
-
-TO DO: 
-
-- Make sure this works
-- Break up this into separate functions, maybe a lidar class
-- we need a method for filtering out
-- need to complete the findx,y,z functions to get the coordinates, we then need to store them in a .csv or some kind of file 
-
-*/
-
-int findX(const float &angle, const float &distance);
-int findY(const float &angle, const float &distance);
-int findZ(const float &angle, const float &distance);
-
-int main(int argc, const char *argv[]){
+// Convert polar to Cartesian
+float findX(const float &angle, const float &distance) {
   
-    ofstream file; 
-    bool isFailed = false;
-    const char *serial_port = "/dev/ttyUSB0"; // port we will need for rasberry to talk to lidar
-    _u32 baudrate = 115200; // communication speed for our lidar 
-
-    RPlidarDriver *driver = RPlidarDriver::CreateDriver(DRIVER_TYPE_SERIALPORT);
-
-    if(!driver){
-        std::cerr << "Creating the driver has failed!" << std::endl; 
-        isFailed = true;
-        return -1;
-    }
-
-    if(IS_FAIL(driver->connect(serial_port, baudrate))){
-        std::cerr << "Communication between PI and Lidar FAILED" << std::endl;
-        isFailed = true;
-        return -1;
-    }
-
-    if(!isFailed)
-         driver->startMotor();
+}
+float findY(const float &angle, const float &distance) {
+ 
+}
+float findZ(const float &angle, const float &distance) {
     
-    if(IS_FAIL(driver->startScan(0,1))){ // Start normal scan
-        std::cerr << "Error to start the scan" << std::endl;
+}
+*/
+int main() {
+    const char* serial_port = "/dev/ttyUSB0";
+    sl_u32 baudrate = 115200;
+    std::cout << "Test";
+  
+    ILidarDriver* driver = *createLidarDriver();
+    if (!driver) {
+        std::cerr << "Failed to create LIDAR driver!" << std::endl;
         return -1;
     }
 
-    // This array will hold all the scan measurements that we get 
-    rplidar_response_measurement_node_hq_t nodes[8192];
-    size_t count; // The amount of actual points that we have 
-
-    while(true){
-        count = sizeof(nodes) / sizeof(nodes[0]); // Maximum number of nodes that it can carry
-        u_result result = driver->grabScanDataHq(nodes, count); // Asking the lidar for the scan
-        std::string userInput; 
-        if(IS_OK(result)){
-            driver->ascendScanData(nodes, count); // puts the nodes in an ascending order based off angle            
-            std::cout << "Are you ready for the data?: " << endl;
-            std::cin >> userInput; 
-            file.open("data.txt");
-            if(userInput == "YES"){
-                for(size_t pos = 0; pos < count; pos++){
-                    float angle = nodes[pos].angle_z_q14 * 90.f / (1 << 14); // takes the raw data and coverts it into degrees
-                    float distance = nodes[pos].dist_mm_q2 / 4.0f; // raw distance / 4 to get millimeters
-                    std::cout << "Angle: " << angle << "distance: " << distance << std::endl; 
-                    file << angle << "," << distance << std::endl; 
-                }
-            }
-            else{
-                break;
-            }
-        }
+    IChannel* channel = *createSerialPortChannel(serial_port, baudrate);
+    if (!channel) {
+        std::cerr << "Failed to create serial channel!" << std::endl;
+        delete driver;
+        return -1;
     }
 
-    file.close();
+  
+    if (SL_IS_FAIL(driver->connect(channel))) {
+        std::cerr << "Failed to connect to LIDAR!" << std::endl;
+        delete driver;
+        return -1;
+    }
+
+
+    driver->setMotorSpeed(660);
+
+ 
+    if (SL_IS_FAIL(driver->startScan(false, true))) {
+        std::cerr << "Failed to start scan!" << std::endl;
+        driver->setMotorSpeed(0);
+
+        delete driver;
+        return -1;
+    }
+
+    // Buffer for scan points
+    sl_lidar_response_measurement_node_hq_t nodes[8192];
+    size_t count = sizeof(nodes)/sizeof(nodes[0]);
+
+    // Grab data once
+    if (SL_IS_OK(driver->grabScanDataHq(nodes, count))) {
+        driver->ascendScanData(nodes, count);
+
+        std::ofstream file("data.csv");
+        for (size_t i = 0; i < count; ++i) {
+            float angle = nodes[i].angle_z_q14 * 90.f / 16384.f;
+            float distance = nodes[i].dist_mm_q2 / 4.0f;
+
+            file << angle << "," << distance << "," << std::endl; 
+        }
+        file.close();
+        std::cout << "Scan saved to data.csv" << std::endl;
+    } else {
+
+        std::cerr << "Failed to grab scan data!" << std::endl;
+    }
+
     driver->stop();
-    driver->stopMotor();
-    RPlidarDriver::DisposeDriver(driver);
+    driver->setMotorSpeed(0);
+    delete driver;
 
-    return 0; 
-
-}
-
-int findX(const float &angle, const float &distance){
-    int x;
-    retun x; 
-}
-
-int findY(const float &angle, const float &distance){
-    int x;
-    retun x; 
-}
-
-int findZ(const float &angle, const float &distance){
-    int x;
-    retun x; 
+    return 0;
 }
