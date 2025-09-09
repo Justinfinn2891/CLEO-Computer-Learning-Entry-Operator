@@ -1,59 +1,39 @@
 #include <iostream>
 #include <string>
-
 #include "sl_lidar.h"
 #include "sl_lidar_driver.h"
 
 using namespace sl;
 
+int findX(const float &angle, const float &distance);
+int findY(const float &angle, const float &distance);
+int findZ(const float &angle, const float &distance);
+void filterData();
 int main() {
     std::cout << "Starting LIDAR test..." << std::endl;
-
-    // ---------------------------
-    // Detect platform and set port
-    // ---------------------------
     std::string serial_port;
-    sl_u32 baudrate = 115200; // adjust if your model needs 256000 or 1000000
-
-#ifdef _WIN32
-    // Windows (COM4 for your setup)
-    serial_port = "\\\\.\\COM4";
-#else
-    // Linux (after usbipd or native Linux USB driver)
+    sl_u32 baudrate = 115200;
     serial_port = "/dev/ttyUSB0";
-#endif
 
     std::cout << "Using port: " << serial_port << " at baud " << baudrate << std::endl;
 
-    // ---------------------------
-    // Create driver
-    // ---------------------------
     ILidarDriver* drv = *createLidarDriver();
     if (!drv) {
         std::cerr << "Failed to create LIDAR driver." << std::endl;
         return -1;
     }
 
-    // ---------------------------
-    // Create serial channel
-    // ---------------------------
     IChannel* channel = (*createSerialPortChannel(serial_port.c_str(), baudrate));
     if (!channel) {
         std::cerr << "Failed to create serial channel." << std::endl;
         return -1;
     }
 
-    // ---------------------------
-    // Connect
-    // ---------------------------
     if (SL_IS_FAIL(drv->connect(channel))) {
         std::cerr << "Error: cannot connect to LIDAR on " << serial_port << std::endl;
         return -1;
     }
 
-    // ---------------------------
-    // Get device info
-    // ---------------------------
     sl_lidar_response_device_info_t devinfo;
     if (SL_IS_FAIL(drv->getDeviceInfo(devinfo))) {
         std::cerr << "Failed to get device info." << std::endl;
@@ -66,17 +46,12 @@ int main() {
               << "  Hardware: " << (int)devinfo.hardware_version
               << std::endl;
 
-    // ---------------------------
-    // Start scanning
-    // ---------------------------
+
     if (SL_IS_FAIL(drv->startScan(0, 1))) {
         std::cerr << "Failed to start scan." << std::endl;
         return -1;
     }
 
-    // ---------------------------
-    // Grab a batch of data
-    // ---------------------------
     sl_lidar_response_measurement_node_hq_t nodes[8192];
     size_t   count = sizeof(nodes) / sizeof(nodes[0]);
 
@@ -100,4 +75,25 @@ int main() {
     }
 
     return 0;
+}
+int findX(const float &angle, const float &distance){
+    int x;
+    return x; 
+}
+
+
+int findY(const float &angle, const float &distance){
+    int x;
+    return x; 
+}
+
+
+
+int findZ(const float &angle, const float &distance){
+    int x;
+    return x; 
+}
+
+void FilterData(){
+
 }
