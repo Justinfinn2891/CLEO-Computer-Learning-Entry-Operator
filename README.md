@@ -15,19 +15,60 @@ r/output/Linux/Release/libsl_lidar_sdk.a
 
 
 
-CXX  lidar.cpp
-mkdir -p `dirname /home/cleo/rplidar_sdk-master/output/Linux/Release/libsl_lidar_sdk.a`
- pack lidar.o->libsl_lidar_sdk.a
- LD   /home/cleo/rplidar_sdk-master/output/Linux/Release/our_test
-/usr/bin/ld: /home/cleo/rplidar_sdk-master/obj/Linux/Release/our_test/lidar.o: in function `main':
-lidar.cpp:(.text.startup+0x40): undefined reference to `rp::standalone::rplidar::RPlidarDriver::CreateDriver(unsigned int)'
-/usr/bin/ld: lidar.cpp:(.text.startup+0x60): undefined reference to `rp::standalone::rplidar::RPlidarDriver::connect(char const*, unsigned int, unsigned int)'
-/usr/bin/ld: lidar.cpp:(.text.startup+0x70): undefined reference to `rp::standalone::rplidar::RPlidarDriver::startMotor()'
-/usr/bin/ld: lidar.cpp:(.text.startup+0x88): undefined reference to `rp::standalone::rplidar::RPlidarDriver::startScan(bool, bool, unsigned int, sl::LidarScanMode*)'
-/usr/bin/ld: lidar.cpp:(.text.startup+0xd4): undefined reference to `rp::standalone::rplidar::RPlidarDriver::grabScanDataHq(sl_lidar_response_measurement_node_hq_t*, unsigned long&, unsigned int)'
-/usr/bin/ld: lidar.cpp:(.text.startup+0xf4): undefined reference to `rp::standalone::rplidar::RPlidarDriver::ascendScanData(sl_lidar_response_measurement_node_hq_t*, unsigned long)'
-/usr/bin/ld: lidar.cpp:(.text.startup+0x398): undefined reference to `rp::standalone::rplidar::RPlidarDriver::stop(unsigned int)'
-/usr/bin/ld: lidar.cpp:(.text.startup+0x3a0): undefined reference to `rp::standalone::rplidar::RPlidarDriver::stopMotor()'
-/usr/bin/ld: lidar.cpp:(.text.startup+0x3a8): undefined reference to `rp::standalone::rplidar::RPlidarDriver::DisposeDriver(rp::standalone::rplidar::RPlidarDriver*)'
-collect2: error: ld returned 1 exit status
-make: *** [/home/cleo/rplidar_sdk-master/mak_common.inc:74: /home/cleo/rplidar_sdk-master/output/Linux/Release/our_test] Error 1
+#include "sl_lidar_driver.h"
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <cmath>
+
+int main() {
+    // Output file
+    std::ofstream file("data.csv");
+    if (!file.is_open()) {
+        std::cerr << "Failed to open file for writing" << std::endl;
+        return -1;
+    }
+
+    // Create the driver object
+    sl::SlamtecLidarDriver driver;
+
+    // Initialize the driver with the serial port
+    const char* port = "/dev/ttyUSB0";
+    const uint32_t baudrate = 115200;
+    if (!driver.initialize(port, baudrate)) {
+        std::cerr << "Failed to initialize LIDAR on port " << port << std::endl;
+        return -1;
+    }
+
+    // Start motor and scanning
+    driver.startMotor();
+    driver.startScan();
+
+    // Grab a single scan frame
+    std::vector<sl::LidarMeasurement> measurements;
+    if (!driver.grabScanData(measurements)) {
+        std::cerr << "Failed to grab scan data" << std::endl;
+        driver.stopMotor();
+        return -1;
+    }
+
+    // Ascend (sort) the data by angle
+    driver.ascendScanData(measurements);
+
+    // Print and store
+    for (auto &m : measurements) {
+        float angle = m.angle;       // in degrees
+        float distance = m.distance; // in mm
+        std::cout << "Angle: " << angle << "  Distance: " << distance << std::endl;
+        file << angle << "," << distance << "\n";
+    }
+
+    // Stop scanning and motor
+    driver.stopScan();
+    driver.stopMotor();
+
+    file.close();
+    std::cout << "Scan complete, data saved to data.csv" << std::endl;
+
+    return 0;
+}
