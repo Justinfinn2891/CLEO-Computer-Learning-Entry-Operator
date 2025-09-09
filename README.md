@@ -26,29 +26,35 @@ collect2: error: ld returned 1 exit status
 
 
 
-cmake_minimum_required(VERSION 3.10)
-project(MyRPLidarProject)
-
-set(CMAKE_CXX_STANDARD 11)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
-# Path to the RPLIDAR SDK
-set(RPLIDAR_SDK_PATH "${CMAKE_SOURCE_DIR}/rplidar_sdk-master/sdk")
-
-# Add the SDK include directories
-include_directories(
-    ${RPLIDAR_SDK_PATH}/include
-    ${RPLIDAR_SDK_PATH}/src
-)
-
-# Collect all SDK source files
-file(GLOB SDK_SOURCES
-    "${RPLIDAR_SDK_PATH}/src/*.cpp"
-    "${RPLIDAR_SDK_PATH}/src/hal/*.cpp"
-)
-
-# Add your program
-add_executable(mylidar
-    lidar.cpp
-    ${SDK_SOURCES}
-)
+/usr/bin/ld: CMakeFiles/mylidar.dir/rplidar_sdk-master/sdk/src/sl_lidar_driver.cpp.o: in function `sl::SlamtecLidarDriver::SlamtecLidarDriver()':
+sl_lidar_driver.cpp:(.text._ZN2sl18SlamtecLidarDriverC2Ev[_ZN2sl18SlamtecLidarDriverC5Ev]+0x170): undefined reference to `sl::internal::LIDARSampleDataUnpacker::CreateInstance(sl::internal::LIDARSampleDataListener&)'
+/usr/bin/ld: CMakeFiles/mylidar.dir/rplidar_sdk-master/sdk/src/sl_lidar_driver.cpp.o: in function `sl::SlamtecLidarDriver::negotiateSerialBaudRate(unsigned int, unsigned int*)':
+sl_lidar_driver.cpp:(.text._ZN2sl18SlamtecLidarDriver23negotiateSerialBaudRateEjPj[_ZN2sl18SlamtecLidarDriver23negotiateSerialBaudRateEjPj]+0x140): undefined reference to `rp::arch::rp_getms()'
+/usr/bin/ld: sl_lidar_driver.cpp:(.text._ZN2sl18SlamtecLidarDriver23negotiateSerialBaudRateEjPj[_ZN2sl18SlamtecLidarDriver23negotiateSerialBaudRateEjPj]+0x1cc): undefined reference to `rp::arch::rp_getms()'
+/usr/bin/ld: CMakeFiles/mylidar.dir/rplidar_sdk-master/sdk/src/sl_serial_channel.cpp.o: in function `sl::SerialPortChannel::SerialPortChannel(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int)':
+sl_serial_channel.cpp:(.text._ZN2sl17SerialPortChannelC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi[_ZN2sl17SerialPortChannelC5ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi]+0x30): undefined reference to `rp::hal::serial_rxtx::CreateRxTx()'
+/usr/bin/ld: CMakeFiles/mylidar.dir/rplidar_sdk-master/sdk/src/sl_tcp_channel.cpp.o: in function `sl::TcpChannel::TcpChannel(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int)':
+sl_tcp_channel.cpp:(.text._ZN2sl10TcpChannelC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi[_ZN2sl10TcpChannelC5ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi]+0x34): undefined reference to `rp::net::StreamSocket::CreateSocket(rp::net::SocketBase::socket_family_t)'
+/usr/bin/ld: sl_tcp_channel.cpp:(.text._ZN2sl10TcpChannelC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi[_ZN2sl10TcpChannelC5ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi]+0x4c): undefined reference to `rp::net::SocketAddress::SocketAddress()'
+/usr/bin/ld: sl_tcp_channel.cpp:(.text._ZN2sl10TcpChannelC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi[_ZN2sl10TcpChannelC5ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi]+0x94): undefined reference to `rp::net::SocketAddress::~SocketAddress()'
+/usr/bin/ld: CMakeFiles/mylidar.dir/rplidar_sdk-master/sdk/src/sl_tcp_channel.cpp.o: in function `sl::TcpChannel::bind(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int)':
+sl_tcp_channel.cpp:(.text._ZN2sl10TcpChannel4bindERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi[_ZN2sl10TcpChannel4bindERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi]+0x38): undefined reference to `rp::net::SocketAddress::SocketAddress(char const*, int, rp::net::SocketAddress::address_type_t)'
+/usr/bin/ld: sl_tcp_channel.cpp:(.text._ZN2sl10TcpChannel4bindERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi[_ZN2sl10TcpChannel4bindERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi]+0x48): undefined reference to `rp::net::SocketAddress::operator=(rp::net::SocketAddress const&)'
+/usr/bin/ld: sl_tcp_channel.cpp:(.text._ZN2sl10TcpChannel4bindERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi[_ZN2sl10TcpChannel4bindERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi]+0x50): undefined reference to `rp::net::SocketAddress::~SocketAddress()'
+/usr/bin/ld: sl_tcp_channel.cpp:(.text._ZN2sl10TcpChannel4bindERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi[_ZN2sl10TcpChannel4bindERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi]+0x64): undefined reference to `rp::net::SocketAddress::~SocketAddress()'
+/usr/bin/ld: CMakeFiles/mylidar.dir/rplidar_sdk-master/sdk/src/sl_tcp_channel.cpp.o: in function `sl::TcpChannel::~TcpChannel()':
+sl_tcp_channel.cpp:(.text._ZN2sl10TcpChannelD2Ev[_ZN2sl10TcpChannelD5Ev]+0x30): undefined reference to `rp::net::SocketAddress::~SocketAddress()'
+/usr/bin/ld: CMakeFiles/mylidar.dir/rplidar_sdk-master/sdk/src/sl_udp_channel.cpp.o: in function `sl::UdpChannel::UdpChannel(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int)':
+sl_udp_channel.cpp:(.text._ZN2sl10UdpChannelC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi[_ZN2sl10UdpChannelC5ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi]+0x34): undefined reference to `rp::net::DGramSocket::CreateSocket(rp::net::SocketBase::socket_family_t)'
+/usr/bin/ld: sl_udp_channel.cpp:(.text._ZN2sl10UdpChannelC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi[_ZN2sl10UdpChannelC5ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi]+0x4c): undefined reference to `rp::net::SocketAddress::SocketAddress()'
+/usr/bin/ld: sl_udp_channel.cpp:(.text._ZN2sl10UdpChannelC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi[_ZN2sl10UdpChannelC5ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi]+0x94): undefined reference to `rp::net::SocketAddress::~SocketAddress()'
+/usr/bin/ld: CMakeFiles/mylidar.dir/rplidar_sdk-master/sdk/src/sl_udp_channel.cpp.o: in function `sl::UdpChannel::bind(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int)':
+sl_udp_channel.cpp:(.text._ZN2sl10UdpChannel4bindERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi[_ZN2sl10UdpChannel4bindERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi]+0x38): undefined reference to `rp::net::SocketAddress::SocketAddress(char const*, int, rp::net::SocketAddress::address_type_t)'
+/usr/bin/ld: sl_udp_channel.cpp:(.text._ZN2sl10UdpChannel4bindERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi[_ZN2sl10UdpChannel4bindERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi]+0x48): undefined reference to `rp::net::SocketAddress::operator=(rp::net::SocketAddress const&)'
+/usr/bin/ld: sl_udp_channel.cpp:(.text._ZN2sl10UdpChannel4bindERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi[_ZN2sl10UdpChannel4bindERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi]+0x50): undefined reference to `rp::net::SocketAddress::~SocketAddress()'
+/usr/bin/ld: sl_udp_channel.cpp:(.text._ZN2sl10UdpChannel4bindERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi[_ZN2sl10UdpChannel4bindERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi]+0x64): undefined reference to `rp::net::SocketAddress::~SocketAddress()'
+/usr/bin/ld: CMakeFiles/mylidar.dir/rplidar_sdk-master/sdk/src/sl_udp_channel.cpp.o: in function `sl::UdpChannel::~UdpChannel()':
+sl_udp_channel.cpp:(.text._ZN2sl10UdpChannelD2Ev[_ZN2sl10UdpChannelD5Ev]+0x30): undefined reference to `rp::net::SocketAddress::~SocketAddress()'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/mylidar.dir/build.make:241: mylidar] Error 1
+make[1]: *** [CMakeFiles/Makefile2:83: CMakeFiles/mylidar.dir/all] Error 2
