@@ -1,91 +1,103 @@
+#include <iostream>
+#include <string>
+
 #include "sl_lidar.h"
 #include "sl_lidar_driver.h"
-#include <iostream>
-#include <fstream>
-#include <cmath>
 
 using namespace sl;
 
-/*
-float findX(float angle_deg, float distance_mm) {
-
-}
-float findY(float angle_deg, float distance_mm) {
- 
-}
-*/
 int main() {
-    const char* serial_port = "/dev/ttyUSB0";
-    sl_u32 baudrate = 115200;
+    std::cout << "Starting LIDAR test..." << std::endl;
 
-    ILidarDriver* driver = *createLidarDriver();
-    if (!driver) {
-        std::cerr << "Failed to create LIDAR driver!" << std::endl;
+    // ---------------------------
+    // Detect platform and set port
+    // ---------------------------
+    std::string serial_port;
+    sl_u32 baudrate = 115200; // adjust if your model needs 256000 or 1000000
+
+#ifdef _WIN32
+    // Windows (COM4 for your setup)
+    serial_port = "\\\\.\\COM4";
+#else
+    // Linux (after usbipd or native Linux USB driver)
+    serial_port = "/dev/ttyUSB0";
+#endif
+
+    std::cout << "Using port: " << serial_port << " at baud " << baudrate << std::endl;
+
+    // ---------------------------
+    // Create driver
+    // ---------------------------
+    ILidarDriver* drv = *createLidarDriver();
+    if (!drv) {
+        std::cerr << "Failed to create LIDAR driver." << std::endl;
         return -1;
     }
 
-    IChannel* channel = *createSerialPortChannel(serial_port, baudrate);
+    // ---------------------------
+    // Create serial channel
+    // ---------------------------
+    IChannel* channel = (*createSerialPortChannel(serial_port.c_str(), baudrate));
     if (!channel) {
         std::cerr << "Failed to create serial channel." << std::endl;
-        delete driver;
         return -1;
     }
 
-    sl_result res = driver->connect(channel);
-    if (SL_IS_FAIL(res)) {
-        std::cerr << "Failed to connect to LIDAR!" << std::endl;
-        delete driver;
+    // ---------------------------
+    // Connect
+    // ---------------------------
+    if (SL_IS_FAIL(drv->connect(channel))) {
+        std::cerr << "Error: cannot connect to LIDAR on " << serial_port << std::endl;
         return -1;
     }
 
-    std::ofstream csv("lidar_data.csv");
-    if (!csv.is_open()) {
-        std::cerr << "Cannot open CSV file for writing!" << std::endl;
-        driver->stop();
-        delete driver;
+    // ---------------------------
+    // Get device info
+    // ---------------------------
+    sl_lidar_response_device_info_t devinfo;
+    if (SL_IS_FAIL(drv->getDeviceInfo(devinfo))) {
+        std::cerr << "Failed to get device info." << std::endl;
         return -1;
     }
 
-    csv << "angle_deg,distance_mm,x_mm,y_mm,z_mm\n";
+    std::cout << "LIDAR connected. Firmware: "
+              << (devinfo.firmware_version >> 8) << "."
+              << (devinfo.firmware_version & 0xFF)
+              << "  Hardware: " << (int)devinfo.hardware_version
+              << std::endl;
 
-    std::cout << "Starting scan. Press Ctrl+C to stop..." << std::endl;
-
-    // Start motor and scan
-    driver->setMotorSpeed(660);
-    res = driver->startScan(false, true);
-    if (SL_IS_FAIL(res)) {
-        std::cerr << "Failed to start scan!" << std::endl;
-        driver->setMotorSpeed(0);
-        delete driver;
+    // ---------------------------
+    // Start scanning
+    // ---------------------------
+    if (SL_IS_FAIL(drv->startScan(0, 1))) {
+        std::cerr << "Failed to start scan." << std::endl;
         return -1;
     }
 
+    // ---------------------------
+    // Grab a batch of data
+    // ---------------------------
     sl_lidar_response_measurement_node_hq_t nodes[8192];
-    size_t count;
+    size_t   count = sizeof(nodes) / sizeof(nodes[0]);
 
-    while (true) {
-        count = sizeof(nodes) / sizeof(nodes[0]);
-        res = driver->grabScanDataHq(nodes, count);
-        if (SL_IS_OK(res)) {
-            driver->ascendScanData(nodes, count);
+    if (SL_IS_OK(drv->grabScanDataHq(nodes, count))) {
+        drv->ascendScanData(nodes, count);
 
-            for (size_t i = 0; i < count; ++i) {
-                float angle = nodes[i].angle_z_q14 * 90.f / 16384.f;
-                float distance = nodes[i].dist_mm_q2 / 4.0f;
-
-                float x = findX(angle, distance);
-                float y = findY(angle, distance);
-                float z = findZ(angle, distance);
-
-                csv << angle << "," << distance << "," << x << "," << y << "," << z << "\n";
-            }
+        for (size_t i = 0; i < count; ++i) {
+            float angle = (nodes[i].angle_z_q14 * 90.f) / 16384.f;
+            float dist  = nodes[i].dist_mm_q2 / 4.0f;
+            std::cout << angle << "," << dist << std::endl;
         }
+    } else {
+        std::cerr << "Failed to grab scan data." << std::endl;
     }
 
-    csv.close();
-    driver->stop();
-    driver->setMotorSpeed(0);
-    delete driver;
+    drv->stop();
+    drv->setMotorSpeed(0);
+
+    if (drv) {
+        delete drv;
+    }
 
     return 0;
 }
