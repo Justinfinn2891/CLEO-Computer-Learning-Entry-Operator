@@ -23,3 +23,32 @@ lidar.cpp:(.text+0x54): undefined reference to `rp::standalone::rplidar::RPlidar
 /usr/bin/ld: lidar.cpp:(.text+0x3c4): undefined reference to `rp::standalone::rplidar::RPlidarDriver::stopMotor()'
 /usr/bin/ld: lidar.cpp:(.text+0x3d0): undefined reference to `rp::standalone::rplidar::RPlidarDriver::DisposeDriver(rp::standalone::rplidar::RPlidarDriver*)'
 collect2: error: ld returned 1 exit status
+
+
+
+cmake_minimum_required(VERSION 3.10)
+project(MyRPLidarProject)
+
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Path to the RPLIDAR SDK
+set(RPLIDAR_SDK_PATH "${CMAKE_SOURCE_DIR}/rplidar_sdk-master/sdk")
+
+# Add the SDK include directories
+include_directories(
+    ${RPLIDAR_SDK_PATH}/include
+    ${RPLIDAR_SDK_PATH}/src
+)
+
+# Collect all SDK source files
+file(GLOB SDK_SOURCES
+    "${RPLIDAR_SDK_PATH}/src/*.cpp"
+    "${RPLIDAR_SDK_PATH}/src/hal/*.cpp"
+)
+
+# Add your program
+add_executable(mylidar
+    lidar.cpp
+    ${SDK_SOURCES}
+)
