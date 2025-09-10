@@ -93,15 +93,19 @@ int main() {
 
             for (size_t i = 0; i < count; ++i) {
                 float verticleAngle = (nodes[i].angle_z_q14 * 90.f) / 16384.f;
+
+                verticleAngle *= M_PI / 180.0f; //to convert to radians
+                float horizRad = testHorizontalAngle * M_PI / 180.0f;
+
                 float dist  = nodes[i].dist_mm_q2 / 4.0f;
 
-                if(dist >= min_distance || dist <= max_distance) continue;
-                if(verticleAngle >= min_angle || verticleAngle <= max_angle) continue;
+                //if(dist >= min_distance || dist <= max_distance) continue;
+                //if(verticleAngle >= min_angle || verticleAngle <= max_angle) continue;
 
                 cartesian coordinate;
 
-                coordinate.x_coordinate = findX(testHorizontalAngle,verticleAngle, dist);
-                coordinate.y_coordinate = findY(testHorizontalAngle,verticleAngle, dist);
+                coordinate.x_coordinate = findX(horizRad,verticleAngle, dist);
+                coordinate.y_coordinate = findY(horizRad,verticleAngle, dist);
                 coordinate.z_coordinate = findZ(verticleAngle, dist);
 
                 finished_points.push_back(coordinate);
@@ -140,7 +144,7 @@ int findY(const float &horizontalAngle, const float &verticleAngle, const float 
 
 //Find the z based on one angle and a distance
 int findZ(const float &verticleAngle, const float &distance){
-    return (distance * cos(verticleAngle));
+    return (distance * sin(verticleAngle));
 }
 
 
