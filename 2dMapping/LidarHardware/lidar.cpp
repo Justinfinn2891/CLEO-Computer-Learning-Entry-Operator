@@ -15,9 +15,9 @@ struct cartesian{
     float x_coordinate, y_coordinate, z_coordinate;
 };
 
-int findX(const float &horizontalAngle, const float &verticleAngle, const float &distance);
-int findY(const float &horizontalAngle, const float &verticleAngle, const float &distance);
-int findZ(const float &verticleAngle, const float &distance);
+float findX(const float &horizontalAngle, const float &verticleAngle, const float &distance);
+float findY(const float &horizontalAngle, const float &verticleAngle, const float &distance);
+float findZ(const float &verticleAngle, const float &distance);
 void saveToFile(std::vector<cartesian> points, bool write_tester);
 
 int main() {
@@ -92,10 +92,17 @@ int main() {
             drv->ascendScanData(nodes, count);
 
             for (size_t i = 0; i < count; ++i) {
+                /*(
                 float verticleAngle = (nodes[i].angle_z_q14 * 90.f) / 16384.f;
+                verticleAngle *= M_PI / 180.0f; // radians
 
-                verticleAngle *= M_PI / 180.0f; //to convert to radians
-                float horizRad = testHorizontalAngle * M_PI / 180.0f;
+                float horizRad = testHorizontalAngle * M_PI / 180.0f; // radians
+
+                */
+                float horizRad = (nodes[i].angle_z_q14 * 90.f) / 16384.f; // azimuth from lidar
+                horizRad *= M_PI / 180.0f;
+
+                float verticalAngle = testHorizontalAngle * M_PI / 180.0f;  
 
                 float dist  = nodes[i].dist_mm_q2 / 4.0f;
 
@@ -104,9 +111,9 @@ int main() {
 
                 cartesian coordinate;
 
-                coordinate.x_coordinate = findX(horizRad,verticleAngle, dist);
-                coordinate.y_coordinate = findY(horizRad,verticleAngle, dist);
-                coordinate.z_coordinate = findZ(verticleAngle, dist);
+                coordinate.x_coordinate = findX(horizRad,verticalAngle, dist);
+                coordinate.y_coordinate = findY(horizRad,verticalAngle, dist);
+                coordinate.z_coordinate = findZ(verticalAngle, dist);
 
                 finished_points.push_back(coordinate);
             }
@@ -133,17 +140,17 @@ int main() {
 }
 
 //Find the x based on two angles and a distance
-int findX(const float &horizontalAngle, const float &verticleAngle, const float &distance){
+float findX(const float &horizontalAngle, const float &verticleAngle, const float &distance){
     return (distance * cos(verticleAngle) * cos(horizontalAngle));
 }
 
 //Find the y based on two angles and a distance
-int findY(const float &horizontalAngle, const float &verticleAngle, const float &distance){
+float findY(const float &horizontalAngle, const float &verticleAngle, const float &distance){
     return (distance * cos(verticleAngle) * sin(horizontalAngle)); 
 }
 
 //Find the z based on one angle and a distance
-int findZ(const float &verticleAngle, const float &distance){
+float findZ(const float &verticleAngle, const float &distance){
     return (distance * sin(verticleAngle));
 }
 
