@@ -119,9 +119,7 @@ int main() {
                 cartesian coordinate;
                 raw_data dataForFile;
 
-                if(coordinate.x_coordinate == 0 && coordinate.y_coordinate == 0 && coordinate.z_coordinate == 0) continue;
-                if(coordinate.x_coordinate == NULL && coordinate.y_coordinate == NULL && coordinate.z_coordinate == NULL) continue;
-
+            
                 dataForFile.angle = nodes[i].angle_z_q14;
                 dataForFile.distance = nodes[i].dist_mm_q2;
 
@@ -129,6 +127,10 @@ int main() {
                 coordinate.y_coordinate = findY(horizRad,verticalAngle, dist);
                 coordinate.z_coordinate = findZ(verticalAngle, dist);
 
+                        
+                if(coordinate.x_coordinate == 0 && coordinate.y_coordinate == 0 && coordinate.z_coordinate == 0) continue;
+                if(coordinate.x_coordinate == NULL && coordinate.y_coordinate == NULL && coordinate.z_coordinate == NULL) continue;
+                
                 finished_data.push_back(dataForFile);
                 finished_points.push_back(coordinate);
             }
