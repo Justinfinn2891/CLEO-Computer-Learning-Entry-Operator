@@ -115,8 +115,12 @@ int main() {
                 //if(dist >= min_distance || dist <= max_distance) continue;
                 //if(verticleAngle >= min_angle || verticleAngle <= max_angle) continue;
 
+                
                 cartesian coordinate;
                 raw_data dataForFile;
+
+                if(coordinate.x_coordinate == 0 && coordinate.y_coordinate == 0 && coordinate.z_coordinate == 0) continue;
+                if(coordinate.x_coordinate == NULL && coordinate.y_coordinate == NULL && coordinate.z_coordinate == NULL) continue;
 
                 dataForFile.angle = nodes[i].angle_z_q14;
                 dataForFile.distance = nodes[i].dist_mm_q2;

@@ -55,11 +55,15 @@ int main(){
         float verticalAngle = testHorizontalAngle * M_PI / 180.0f;  
         float dist = distance[j] / 4.0f;
 
+        
         cartesian coordinate;
         coordinate.x_coordinate = findX(horizRad, verticalAngle, dist);
         coordinate.y_coordinate = findY(horizRad, verticalAngle, dist);
         coordinate.z_coordinate = findZ(verticalAngle, dist);
 
+        if(coordinate.x_coordinate == 0 && coordinate.y_coordinate == 0 && coordinate.z_coordinate == 0) continue;
+        if(coordinate.x_coordinate == NULL && coordinate.y_coordinate == NULL && coordinate.z_coordinate == NULL) continue;
+        
         finished_points.push_back(coordinate);
     }
     saveToFile(finished_points);
