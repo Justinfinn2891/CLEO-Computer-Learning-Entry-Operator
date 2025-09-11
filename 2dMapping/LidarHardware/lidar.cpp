@@ -15,6 +15,10 @@ struct cartesian{
     float x_coordinate, y_coordinate, z_coordinate;
 };
 
+struct raw_data{
+    float distance, angle; 
+};
+
 float findX(const float &horizontalAngle, const float &verticleAngle, const float &distance);
 float findY(const float &horizontalAngle, const float &verticleAngle, const float &distance);
 float findZ(const float &verticleAngle, const float &distance);
@@ -87,7 +91,7 @@ int main() {
         sl_lidar_response_measurement_node_hq_t nodes[8192];
         size_t   count = sizeof(nodes) / sizeof(nodes[0]);
         std::vector<cartesian> finished_points;
-
+        std::vector<raw_data> finished_data;
         if (SL_IS_OK(drv->grabScanDataHq(nodes, count))) {
             drv->ascendScanData(nodes, count);
 
@@ -98,7 +102,9 @@ int main() {
 
                 float horizRad = testHorizontalAngle * M_PI / 180.0f; // radians
 
+                ATTENTION: I replaced the horizontal and vertical to see if this helped. 
                 */
+                
                 float horizRad = (nodes[i].angle_z_q14 * 90.f) / 16384.f; // azimuth from lidar
                 horizRad *= M_PI / 180.0f;
 
@@ -110,11 +116,16 @@ int main() {
                 //if(verticleAngle >= min_angle || verticleAngle <= max_angle) continue;
 
                 cartesian coordinate;
+                raw_data dataForFile;
+
+                dataForFile.angle = nodes[i].angle_z_q14;
+                dataForFile.distance = nodes[i].dist_mm_q2;
 
                 coordinate.x_coordinate = findX(horizRad,verticalAngle, dist);
                 coordinate.y_coordinate = findY(horizRad,verticalAngle, dist);
                 coordinate.z_coordinate = findZ(verticalAngle, dist);
 
+                finished_data.push_back(dataForFile);
                 finished_points.push_back(coordinate);
             }
         }
@@ -172,5 +183,19 @@ void saveToFile(std::vector<cartesian> points, bool write_tester){
 
     for(const auto& p: points){
         file << p.x_coordinate << "," << p.y_coordinate << "," << p.z_coordinate << std::endl; 
+    }
+}
+
+void SaveToRawFile(std::vector<raw_data> data){
+    std::string file_name = "raw_lidar.csv";
+    std::ofstream file(file_name, std::ios::app);
+
+    if(!file.is_open()){
+        std::cerr << "The file has failed to open; possibly failed" << std::endl;
+        std::cout << "Filename tried: " << file_name << std::endl;
+    }
+
+    for(const auto& p: data){
+        file << p.angle << "," << p.distance << std::endl; 
     }
 }
