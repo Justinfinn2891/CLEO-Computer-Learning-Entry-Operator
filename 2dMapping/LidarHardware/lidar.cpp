@@ -16,13 +16,14 @@ struct cartesian{
 };
 
 struct raw_data{
-    float distance, angle; 
+    float distance, angleH, angleV; 
 };
 
 float findX(const float &horizontalAngle, const float &verticleAngle, const float &distance);
 float findY(const float &horizontalAngle, const float &verticleAngle, const float &distance);
 float findZ(const float &verticleAngle, const float &distance);
 void saveToFile(std::vector<cartesian> points, bool write_tester);
+void SaveToRawFile(std::vector<raw_data> data);
 
 int main() {
 
@@ -119,8 +120,8 @@ int main() {
                 cartesian coordinate;
                 raw_data dataForFile;
 
-            
-                dataForFile.angle = nodes[i].angle_z_q14;
+                dataForFile.angleV = testHorizontalAngle;
+                dataForFile.angleH = nodes[i].angle_z_q14;
                 dataForFile.distance = nodes[i].dist_mm_q2;
 
                 coordinate.x_coordinate = findX(horizRad,verticalAngle, dist);
@@ -138,6 +139,8 @@ int main() {
         else {
         std::cerr << "Failed to grab scan data." << std::endl;
     }
+
+    SaveToRawFile(finished_data);
     saveToFile(finished_points,first_write);
     first_write = false;
     testHorizontalAngle += 1;   // just to increment each scan for simple testing
@@ -146,6 +149,7 @@ int main() {
     std::cin >> command;
     } while(command == 'c');
     
+
     drv->stop();
     drv->setMotorSpeed(0);
 
@@ -155,6 +159,11 @@ int main() {
 
     return 0;
 }
+
+
+
+
+
 
 //Find the x based on two angles and a distance
 float findX(const float &horizontalAngle, const float &verticleAngle, const float &distance){
@@ -170,7 +179,6 @@ float findY(const float &horizontalAngle, const float &verticleAngle, const floa
 float findZ(const float &verticleAngle, const float &distance){
     return (distance * sin(verticleAngle));
 }
-
 
 
 //Attemps to create or open a csv file for storing the refind points
@@ -192,6 +200,7 @@ void saveToFile(std::vector<cartesian> points, bool write_tester){
     }
 }
 
+
 void SaveToRawFile(std::vector<raw_data> data){
     std::string file_name = "raw_lidar.csv";
     std::ofstream file(file_name, std::ios::app);
@@ -202,6 +211,6 @@ void SaveToRawFile(std::vector<raw_data> data){
     }
 
     for(const auto& p: data){
-        file << p.angle << "," << p.distance << std::endl; 
+        file << p.angleV << "," << p.angleH << "," << p.distance << std::endl; 
     }
 }
