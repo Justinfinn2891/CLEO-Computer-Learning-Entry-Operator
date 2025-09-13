@@ -108,7 +108,7 @@ int main() {
                 
                 float horizRad = (nodes[i].angle_z_q14 * 90.f) / 16384.f; // azimuth from lidar
                 horizRad *= M_PI / 180.0f;
-
+           
                 float verticalAngle = testHorizontalAngle * M_PI / 180.0f;  
 
                 float dist  = nodes[i].dist_mm_q2 / 4.0f;

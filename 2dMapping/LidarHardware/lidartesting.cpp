@@ -22,49 +22,59 @@ void saveToFile(std::vector<cartesian> points);
 
 int main(){
 
-    ifstream file;
-
-    // put in a testing script, something we previously scan from lidar.cpp 
-    //system("./lidar");
-    file.open("raw_lidar.csv");
+std::ifstream file("../tests/raw_lidar.csv");
+    if (!file.is_open()) {
+        std::cerr << "Error: Could not open file." << std::endl;
+        return 1;
+    }
 
     int i = 0;
     float angle[MAX]; 
     float distance[MAX];
-    int testHorizontalAngle = 0;
-    std::string line;
-    cout << "Loading the file, extracting data now..." << endl; 
-    while (std::getline(file, line)) {
-        std::stringstream ss(line);
-        std::string angleStr, distStr;
+    float angleV[MAX];
 
-        if (std::getline(ss, angleStr, ',') && std::getline(ss, distStr, ',')) {
-            angle[i] = std::stof(angleStr);
+    std::string line;
+    std::cout << "Loading the file, extracting data now..." << std::endl;
+
+    while (std::getline(file, line) && i < MAX) {
+        std::stringstream ss(line);
+        std::string angleStr, distStr, anglVStr;
+        // read 3 columns
+        if (std::getline(ss, angleStr, ',') && 
+            std::getline(ss, distStr, ',') && 
+            std::getline(ss, anglVStr, ',')) {
+            
+            angle[i]   = std::stof(angleStr);
             distance[i] = std::stof(distStr);
+            angleV[i]  = std::stof(anglVStr);
             i++;
         }
     }
+    
 
     cout << "data extraction: COMPLETE" << endl; 
-
+    cout << "I IS: " << i << endl;
     vector <cartesian> finished_points;
     for(int j = 0; j < i; j++) {
         float horizRad = (angle[j] * 90.f) / 16384.f; 
         horizRad *= M_PI / 180.0f;
 
-        float verticalAngle = testHorizontalAngle * M_PI / 180.0f;  
+        float verticalAngle = angleV[j] * M_PI / 180.0f;  
+
         float dist = distance[j] / 4.0f;
 
-        
         cartesian coordinate;
         coordinate.x_coordinate = findX(horizRad, verticalAngle, dist);
         coordinate.y_coordinate = findY(horizRad, verticalAngle, dist);
         coordinate.z_coordinate = findZ(verticalAngle, dist);
 
-        if(coordinate.x_coordinate == 0 && coordinate.y_coordinate == 0 && coordinate.z_coordinate == 0) continue;
-        if(coordinate.x_coordinate == NULL && coordinate.y_coordinate == NULL && coordinate.z_coordinate == NULL) continue;
+
+        cout << "This is the value: " << coordinate.x_coordinate << endl; 
+       // if(coordinate.x_coordinate == 0 && coordinate.y_coordinate == 0 && coordinate.z_coordinate == 0) continue;
+       // if(coordinate.x_coordinate == NULL && coordinate.y_coordinate == NULL && coordinate.z_coordinate == NULL) continue;
         
         finished_points.push_back(coordinate);
+    
     }
     saveToFile(finished_points);
     file.close();
@@ -92,8 +102,9 @@ float findZ(const float &verticleAngle, const float &distance){
 
 //Attemps to create or open a csv file for storing the refind points
 void saveToFile(std::vector<cartesian> points){
+    cout << "DAWD" << endl; 
     std::string file_name = "test.csv";
-    std::ofstream file(file_name, std::ios::app);
+    std::ofstream file(file_name);
     cout << "IT SAVED";
     if(!file.is_open()){
         std::cerr << "The file has failed to open; possibly failed" << std::endl;
@@ -104,4 +115,6 @@ void saveToFile(std::vector<cartesian> points){
     for(const auto& p: points){
         file << p.x_coordinate << "," << p.y_coordinate << "," << p.z_coordinate << std::endl; 
     }
+
+    file.close();
 }
