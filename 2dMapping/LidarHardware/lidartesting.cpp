@@ -26,7 +26,7 @@ int main(){
 
     // put in a testing script, something we previously scan from lidar.cpp 
     //system("./lidar");
-    file.open("test_lidar_data.csv");
+    file.open("raw_lidar.csv");
 
     int i = 0;
     float angle[MAX]; 
