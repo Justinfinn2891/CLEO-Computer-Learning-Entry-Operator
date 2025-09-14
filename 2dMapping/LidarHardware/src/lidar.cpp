@@ -5,6 +5,8 @@
 #include <vector>
 #include <fstream>
 #include <cmath>
+
+#include "../include/coordinates.h"
 using namespace sl;
 
 /* GOALS:
@@ -14,6 +16,7 @@ using namespace sl;
 struct cartesian{
     float x_coordinate, y_coordinate, z_coordinate;
 };
+
 
 struct raw_data{
     float distance, angleH, angleV; 
@@ -26,7 +29,6 @@ void saveToFile(std::vector<cartesian> points, bool write_tester);
 void SaveToRawFile(std::vector<raw_data> data);
 
 int main() {
-
     /////////////////////////////////////
     //Basic Initizlization do not touch//
     /////////////////////////////////////
