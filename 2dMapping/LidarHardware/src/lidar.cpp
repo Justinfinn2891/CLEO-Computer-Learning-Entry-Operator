@@ -100,10 +100,10 @@ int main() {
 
             for (size_t i = 0; i < count; ++i) {
                 
-                float horizRad = (nodes[i].angle_z_q14 * 90.f) / 16384.f; // azimuth from lidar
-                horizRad *= M_PI / 180.0f;
+                float verticalAngle = (nodes[i].angle_z_q14 * 90.f) / 16384.f; // azimuth from lidar
+                verticalAngle *= M_PI / 180.0f;
            
-                float verticalAngle = testHorizontalAngle * M_PI / 180.0f;  
+                float horizRad = testHorizontalAngle * M_PI / 180.0f;  
 
                 float dist  = nodes[i].dist_mm_q2 / 4.0f;
 
@@ -112,8 +112,8 @@ int main() {
                 dataForFile.distance = nodes[i].dist_mm_q2;
 
 
-                coordinate.x_coordinate = coords.findX(horizRad,verticalAngle, dist);
-                coordinate.y_coordinate = coords.findY(horizRad,verticalAngle, dist);
+                coordinate.x_coordinate = coords.findX(verticalAngle,horizRad, dist);
+                coordinate.y_coordinate = coords.findY(verticalAngle,horizRad, dist);
                 coordinate.z_coordinate = coords.findZ(verticalAngle, dist);
 
                         
