@@ -1,27 +1,23 @@
-# Compiler and flags
 CXX = g++
-CXXFLAGS = -std=c++14 -Wall -Wextra -pthread
+CXXFLAGS = -std=c++14 -Wall -Wextra -pthread \
+           -I../rplidar_sdk-master/sdk/include \
+           -I../rplidar_sdk-master/sdk/src \
+           -I../include
 
-# Paths
-INCLUDES = -I../rplidar_sdk-master/sdk/include \
-           -I../rplidar_sdk-master/sdk/src
+LDFLAGS = -L../rplidar_sdk-master/output/Linux/Release -lsl_lidar_sdk
 
-LIBS = -L../rplidar_sdk-master/output/Linux/Release \
-       -lsl_lidar_sdk
-
-# Targets
-TARGET = lidar
-SRC = lidar.cpp
+SRC = lidar.cpp ../lib/coordinates.cpp
 OBJ = $(SRC:.cpp=.o)
 
-# Build rules
+TARGET = lidar
+
 all: $(TARGET)
 
 $(TARGET): $(OBJ)
-	$(CXX) $(OBJ) -o $@ $(CXXFLAGS) $(INCLUDES) $(LIBS)
+	$(CXX) $(OBJ) -o $@ $(LDFLAGS)
 
 %.o: %.cpp
-	$(CXX) -c $< -o $@ $(CXXFLAGS) $(INCLUDES)
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJ) $(TARGET)

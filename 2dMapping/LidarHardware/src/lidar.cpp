@@ -13,22 +13,21 @@ using namespace sl;
 1.) We need to put together our lidar camera to try to handle 3d computing
 2.) We need to start implementing the coordinates to send to the csv file
 3.) We need to get the iterative closest point algorithm working*/
-struct cartesian{
-    float x_coordinate, y_coordinate, z_coordinate;
-};
 
 
-struct raw_data{
-    float distance, angleH, angleV; 
-};
 
-float findX(const float &horizontalAngle, const float &verticleAngle, const float &distance);
-float findY(const float &horizontalAngle, const float &verticleAngle, const float &distance);
-float findZ(const float &verticleAngle, const float &distance);
-void saveToFile(std::vector<cartesian> points, bool write_tester);
-void SaveToRawFile(std::vector<raw_data> data);
+void saveToFile(std::vector<Coordinates::cartesian> points, bool write_tester);
+void SaveToRawFile(std::vector<Coordinates::raw_data> data);
+
 
 int main() {
+
+    Coordinates::cartesian coordinate;
+    Coordinates coords;
+    Coordinates::raw_data dataForFile;
+
+
+
     /////////////////////////////////////
     //Basic Initizlization do not touch//
     /////////////////////////////////////
@@ -68,18 +67,19 @@ int main() {
               << "  Hardware: " << (int)devinfo.hardware_version
               << std::endl;
 
-    /////////////////////////////////////
-    //Basic Initizlization do not touch//
-    /////////////////////////////////////
-
 
     if (SL_IS_FAIL(drv->startScan(0, 1))) {
         std::cerr << "Failed to start scan." << std::endl;
         return -1;
     }
 
+    /////////////////////////////////////
+    //Basic Initizlization do not touch//
+    /////////////////////////////////////
+
 
     // ---begin interactive loop--- //
+
     char command;
     bool first_write = true;
     
@@ -93,20 +93,12 @@ int main() {
     do{
         sl_lidar_response_measurement_node_hq_t nodes[8192];
         size_t   count = sizeof(nodes) / sizeof(nodes[0]);
-        std::vector<cartesian> finished_points;
-        std::vector<raw_data> finished_data;
+        std::vector<Coordinates::cartesian> finished_points;
+        std::vector<Coordinates::raw_data> finished_data;
         if (SL_IS_OK(drv->grabScanDataHq(nodes, count))) {
             drv->ascendScanData(nodes, count);
 
             for (size_t i = 0; i < count; ++i) {
-                /*(
-                float verticleAngle = (nodes[i].angle_z_q14 * 90.f) / 16384.f;
-                verticleAngle *= M_PI / 180.0f; // radians
-
-                float horizRad = testHorizontalAngle * M_PI / 180.0f; // radians
-
-                ATTENTION: I replaced the horizontal and vertical to see if this helped. 
-                */
                 
                 float horizRad = (nodes[i].angle_z_q14 * 90.f) / 16384.f; // azimuth from lidar
                 horizRad *= M_PI / 180.0f;
@@ -115,20 +107,14 @@ int main() {
 
                 float dist  = nodes[i].dist_mm_q2 / 4.0f;
 
-                //if(dist >= min_distance || dist <= max_distance) continue;
-                //if(verticleAngle >= min_angle || verticleAngle <= max_angle) continue;
-
-                
-                cartesian coordinate;
-                raw_data dataForFile;
-
                 dataForFile.angleV = testHorizontalAngle;
                 dataForFile.angleH = nodes[i].angle_z_q14;
                 dataForFile.distance = nodes[i].dist_mm_q2;
 
-                coordinate.x_coordinate = findX(horizRad,verticalAngle, dist);
-                coordinate.y_coordinate = findY(horizRad,verticalAngle, dist);
-                coordinate.z_coordinate = findZ(verticalAngle, dist);
+
+                coordinate.x_coordinate = coords.findX(horizRad,verticalAngle, dist);
+                coordinate.y_coordinate = coords.findY(horizRad,verticalAngle, dist);
+                coordinate.z_coordinate = coords.findZ(verticalAngle, dist);
 
                         
                 if(coordinate.x_coordinate == 0 && coordinate.y_coordinate == 0 && coordinate.z_coordinate == 0) continue;
@@ -163,28 +149,8 @@ int main() {
 }
 
 
-
-
-
-
-//Find the x based on two angles and a distance
-float findX(const float &horizontalAngle, const float &verticleAngle, const float &distance){
-    return (distance * cos(verticleAngle) * cos(horizontalAngle));
-}
-
-//Find the y based on two angles and a distance
-float findY(const float &horizontalAngle, const float &verticleAngle, const float &distance){
-    return (distance * cos(verticleAngle) * sin(horizontalAngle)); 
-}
-
-//Find the z based on one angle and a distance
-float findZ(const float &verticleAngle, const float &distance){
-    return (distance * sin(verticleAngle));
-}
-
-
 //Attemps to create or open a csv file for storing the refind points
-void saveToFile(std::vector<cartesian> points, bool write_tester){
+void saveToFile(std::vector<Coordinates::cartesian> points, bool write_tester){
     std::string file_name = "sorted_xyz.csv";
     std::ofstream file(file_name, std::ios::app);
 
@@ -203,7 +169,7 @@ void saveToFile(std::vector<cartesian> points, bool write_tester){
 }
 
 
-void SaveToRawFile(std::vector<raw_data> data){
+void SaveToRawFile(std::vector<Coordinates::raw_data> data){
     std::string file_name = "raw_lidar.csv";
     std::ofstream file(file_name, std::ios::app);
 
