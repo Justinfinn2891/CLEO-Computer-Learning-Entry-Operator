@@ -112,9 +112,9 @@ int main() {
                 dataForFile.distance = nodes[i].dist_mm_q2;
 
 
-                coordinate.x_coordinate = coords.findX(verticalAngle,horizRad, dist);
+                coordinate.x_coordinate = coords.findX(verticalAngle, dist);
                 coordinate.y_coordinate = coords.findY(verticalAngle,horizRad, dist);
-                coordinate.z_coordinate = coords.findZ(verticalAngle, dist);
+                coordinate.z_coordinate = coords.findZ(verticalAngle,horizRad, dist);
 
                         
                 if(coordinate.x_coordinate == 0 && coordinate.y_coordinate == 0 && coordinate.z_coordinate == 0) continue;

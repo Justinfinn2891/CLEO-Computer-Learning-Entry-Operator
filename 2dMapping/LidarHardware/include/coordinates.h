@@ -5,9 +5,9 @@ class Coordinates{
  
     public:
 
-    float findX(const float &verticleAngle, const float &horizontalAngle, const float &distance);
+    float findZ(const float &verticleAngle, const float &horizontalAngle, const float &distance);
     float findY(const float &verticleAngle, const float &horizontalAngle, const float &distance);
-    float findZ(const float &verticleAngle, const float &distance);
+    float findX(const float &verticleAngle, const float &distance);
 
     struct cartesian{
     float x_coordinate, y_coordinate, z_coordinate;
