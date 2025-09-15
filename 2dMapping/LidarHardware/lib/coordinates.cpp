@@ -13,5 +13,5 @@ float Coordinates::findY(const float &verticleAngle, const float &horizontalAngl
 
 //Find the z based on one angle and a distance
 float Coordinates::findX(const float &verticleAngle, const float &distance){
-    return (distance * sin(verticleAngle));
+    return (distance * cos(verticleAngle));
 }
