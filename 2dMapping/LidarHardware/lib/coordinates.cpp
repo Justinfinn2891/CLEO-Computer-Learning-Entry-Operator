@@ -2,12 +2,12 @@
 #include <cmath>
 
 //Find the x based on two angles and a distance
-float Coordinates::findX(const float &horizontalAngle, const float &verticleAngle, const float &distance){
+float Coordinates::findX(const float &verticleAngle, const float &horizontalAngle, const float &distance){
     return (distance * cos(verticleAngle) * cos(horizontalAngle));
 }
 
 //Find the y based on two angles and a distance
-float Coordinates::findY(const float &horizontalAngle, const float &verticleAngle, const float &distance){
+float Coordinates::findY(const float &verticleAngle, const float &horizontalAngle, const float &distance){
     return (distance * cos(verticleAngle) * sin(horizontalAngle)); 
 }
 
