@@ -33,6 +33,8 @@ class Motor{
         void stepMotor(const int &step);
         void forward(const int &stepCount, const int &delayMs = 2);
         void backward(const int &stepCount, const int &delayMs = 2);
+        void Activate();
+        void Deactivate();
 };
 
 #endif // MOTOR_H

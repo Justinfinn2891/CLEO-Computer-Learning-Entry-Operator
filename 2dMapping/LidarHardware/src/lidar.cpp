@@ -5,7 +5,7 @@
 #include <vector>
 #include <fstream>
 #include <cmath>
-
+#include "../include/motor.h"
 #include "../include/coordinates.h"
 using namespace sl;
 

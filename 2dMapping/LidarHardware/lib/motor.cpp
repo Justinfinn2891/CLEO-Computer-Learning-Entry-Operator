@@ -4,11 +4,11 @@
 // CREATE FUNCTIONS HERE, label in .h and then implemnent in lidar.cpp
 
 
-Motor::Motor(){
-    Pin1 = 0; // GPIO17
-    Pin2 = 1; // 18
-    Pin3 = 2; // 19
-    Pin4 = 3; // 20
+    Motor::Motor(){
+        Pin1 = 0; // GPIO17
+        Pin2 = 1; // 18
+        Pin3 = 2; // 27
+        Pin4 = 3; // 22
 
     // rows represent a step and the 4 numbers represent which coil is energized for ON (1) and OFF (0)
 
@@ -37,28 +37,20 @@ void Motor::backward(const int &stepCount, const int &delayMs){
         delay(delayMs); // small delay in between steps 
     }
 }
-// delete later, this is for testing purposes with the step motor
-int main(){
-    wiringPiSetup();
-    Motor motor; 
+
+void Motor::Activate(){
 
     pinMode(motor.Pin1, OUTPUT); // Assign output to control them with high / low signals 
     pinMode(motor.Pin2, OUTPUT);
     pinMode(motor.Pin3, OUTPUT);
     pinMode(motor.Pin4, OUTPUT);
-    
-    int halfRotation = 2048; // This will equal to 180 degrees so we can go halfway and then go back to origin
 
+}
 
-    motor.forward(halfRotation);
-    sleep(2);
-    motor.backward(halfRotation);
+void Motor:: Deactivate(){
 
-    //powers off the motor coils
     digitalWrite(motor.Pin1, 0);
     digitalWrite(motor.Pin2, 0);
     digitalWrite(motor.Pin3, 0);
     digitalWrite(motor.Pin4, 0);
-
-    
 }
