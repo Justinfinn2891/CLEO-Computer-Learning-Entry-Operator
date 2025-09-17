@@ -11,16 +11,7 @@ Motor::Motor(){
     Pin4 = 3; // 20
 
     // rows represent a step and the 4 numbers represent which coil is energized for ON (1) and OFF (0)
-    steps[8][4] = {
-        {1, 0, 0, 0},
-        {1, 1, 0, 0},
-        {0, 1, 0, 0},
-        {0, 1, 1, 0},
-        {0, 0, 1, 0},
-        {0, 0, 1, 1},
-        {0, 0, 0, 1},
-        {1, 0, 0, 1}
-    };
+
 }
 
 // This function will be used for HIGH or LOW setting for the motor pins 
@@ -33,14 +24,14 @@ void Motor::stepMotor(const int &current_step){
 
 }
 
-void Motor::forward(const int &stepCount, const int &delayMs = 2){
+void Motor::forward(const int &stepCount, const int &delayMs){
     for(int i = 0; i < stepCount; i++){
         stepMotor(i % 8);
         delay(delayMs);
     }
 }
 
-void Motor::backward(const int &stepCount, const int &delayMs = 2){
+void Motor::backward(const int &stepCount, const int &delayMs){
     for(int i = 0; i < stepCount; i++){
         stepMotor(7 - (i % 8));
         delay(delayMs); // small delay in between steps 
