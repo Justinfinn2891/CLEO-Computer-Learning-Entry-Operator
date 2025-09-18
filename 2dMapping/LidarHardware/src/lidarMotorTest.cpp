@@ -83,17 +83,18 @@ int main() {
     const float max_angle = 2500.0f;
 
     float testHorizontalAngle = 0;
-
+    const int halfRotation = 2048;
+    const int degree_per_step = 180f / halfRotation;// this will put each indiviudal step into a degree
+    int currentPosition = 0;
     Motor motor; 
     wiringPiSetup();
     do{
-        // Code to start the step motor
+        motor.Activate()
         motor.forward(halfRotation);
-        sleep(2);
-        motor.Activate();
+       
+        current_position = (current_position + halfRotation) % halfRotation;
 
-        int halfRotation = 2048; 
-
+        float testHorizontalAngle = currentPosition * degree_per_step; 
         sl_lidar_response_measurement_node_hq_t nodes[8192];
         size_t   count = sizeof(nodes) / sizeof(nodes[0]);
         std::vector<Coordinates::cartesian> finished_points;
@@ -136,11 +137,11 @@ int main() {
     motor.backward(halfRotation);
     SaveToRawFile(finished_data);
     saveToFile(finished_points,first_write);
-    first_write = false;
-    /* We need to track the angle to use for the horizontal angle here */
 
-    testHorizontalAngle += 1;   // just to increment each scan for simple testing
+    current_position = (current_position - halfRotation + halfRotation) % halfRotation;  /*
 
+    this will make it go back to zero
+    */
     std::cout << "Press C to stop the scan";
     std::cin >> command;
     } while(command != 'c');
